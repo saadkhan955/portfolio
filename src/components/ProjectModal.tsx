@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { X, ExternalLink, CheckCircle2 } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { Project } from '../types';
@@ -9,15 +9,42 @@ interface ProjectModalProps {
 }
 
 export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+  // Lock background body scroll and listen for Escape key
+  useEffect(() => {
+    if (project) {
+      const originalOverflow = document.body.style.overflow;
+      document.body.style.overflow = 'hidden';
+
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          onClose();
+        }
+      };
+
+      window.addEventListener('keydown', handleKeyDown);
+      return () => {
+        document.body.style.overflow = originalOverflow || 'unset';
+        window.removeEventListener('keydown', handleKeyDown);
+      };
+    }
+  }, [project, onClose]);
+
   if (!project) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200">
+    <div 
+      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200"
+      onClick={(e) => {
+        if (e.target === e.currentTarget) onClose();
+      }}
+      role="dialog"
+      aria-modal="true"
+    >
       <div 
-        className="relative w-full max-w-2xl max-h-[90vh] overflow-y-auto bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl text-slate-100"
-        role="dialog"
-        aria-modal="true"
+        className="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto bg-slate-900 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/80 text-slate-100 my-auto"
+        onClick={(e) => e.stopPropagation()}
       >
+        {/* Header */}
         <div className="flex items-start justify-between gap-4 pb-5 border-b border-slate-800">
           <div>
             <div className="flex items-center gap-2.5 mb-1.5">
@@ -41,12 +68,13 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           <button
             onClick={onClose}
             aria-label="Close modal"
-            className="p-2 text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"
+            className="p-2 text-slate-400 hover:text-white bg-slate-800 hover:bg-slate-700 rounded-lg transition-colors cursor-pointer shrink-0"
           >
             <X className="w-5 h-5" />
           </button>
         </div>
 
+        {/* Content */}
         <div className="py-5 space-y-5">
           <div>
             <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
@@ -60,7 +88,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {project.metrics && project.metrics.length > 0 && (
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
               {project.metrics.map((m, idx) => (
-                <div key={idx} className="p-2.5 bg-slate-950/60 border border-slate-800/80 rounded-xl">
+                <div key={idx} className="p-2.5 bg-slate-950/80 border border-slate-800 rounded-xl">
                   <div className="text-[11px] text-slate-400 font-medium">{m.label}</div>
                   <div className="text-xs sm:text-sm font-bold text-white mt-0.5">{m.value}</div>
                 </div>
@@ -98,6 +126,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
         </div>
 
+        {/* Footer */}
         <div className="pt-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
           <div className="flex items-center gap-3">
             {project.liveUrl && (
