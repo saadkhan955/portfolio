@@ -21,6 +21,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
 
   const navLinks = [
     { name: 'Featured Work', href: '#projects' },
+    { name: 'Extensions', href: '#extensions' },
     { name: 'Architecture', href: '#architecture' },
     { name: 'Experience', href: '#experience' },
     { name: 'Skills', href: '#skills' },
@@ -59,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
               <a
                 key={link.name}
                 href={link.href}
-                className="px-4 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 rounded-full transition-all"
+                className="px-3.5 py-1.5 text-xs font-semibold text-slate-300 hover:text-white hover:bg-slate-800/80 rounded-full transition-all"
               >
                 {link.name}
               </a>

@@ -3,6 +3,7 @@ import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { StatsBar } from './components/StatsBar';
 import { ProjectSection } from './components/ProjectSection';
+import { ExtensionsShowcase } from './components/ExtensionsShowcase';
 import { ArchitectureHighlights } from './components/ArchitectureHighlights';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
 import { SkillsSection } from './components/SkillsSection';
@@ -21,6 +22,7 @@ export const App: React.FC = () => {
         <Hero onOpenResume={() => setResumeOpen(true)} />
         <StatsBar />
         <ProjectSection />
+        <ExtensionsShowcase />
         <ArchitectureHighlights />
         <ExperienceTimeline />
         <SkillsSection />
