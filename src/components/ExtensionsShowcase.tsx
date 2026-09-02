@@ -1,6 +1,6 @@
 import React from 'react';
 import { Terminal, ShieldCheck, Zap, Sparkles, CheckCircle2, ArrowUpRight, Copy, PlaySquare, Laptop } from 'lucide-react';
-import { GithubIcon } from './Icons';
+import { GithubIcon, ChromeIcon } from './Icons';
 
 export const ExtensionsShowcase: React.FC = () => {
   return (
@@ -58,8 +58,9 @@ export const ExtensionsShowcase: React.FC = () => {
                   </div>
                 </div>
 
-                <span className="px-2.5 py-1 text-[11px] font-bold rounded-full bg-slate-800 text-slate-300 border border-slate-700 shrink-0">
-                  Live on Cloudflare
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-bold rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-800/60 shrink-0">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Live on Chrome Web Store</span>
                 </span>
               </div>
 
@@ -67,7 +68,7 @@ export const ExtensionsShowcase: React.FC = () => {
                 Converts all open YouTube tabs into organized, trackable YouTube playlists with one click. Built strictly under Chrome Extension Manifest V3 security rules with zero inline scripts and automatic theme adaptation.
               </p>
 
-              {/* Interactive Mockup Container */}
+              {/* Feature Highlights Mockup Container */}
               <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 mb-6 space-y-3 font-mono text-xs">
                 <div className="flex items-center justify-between text-slate-400 border-b border-slate-800 pb-2 text-[11px]">
                   <span className="flex items-center gap-1.5 font-sans font-semibold text-slate-300">
@@ -103,26 +104,38 @@ export const ExtensionsShowcase: React.FC = () => {
               </div>
             </div>
 
-            {/* Actions */}
-            <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-3">
-              <a
-                href="https://tfy.khansaad.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-xl transition-all shadow-md shadow-cyan-500/20"
-              >
-                <span>tfy.khansaad.dev</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
+            {/* Actions: Live Site, Chrome Web Store, Source Code */}
+            <div className="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2.5">
+              <div className="flex flex-wrap items-center gap-2">
+                <a
+                  href="https://tfy.khansaad.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-xl transition-all shadow-md shadow-cyan-500/20"
+                >
+                  <span>tfy.khansaad.dev</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+
+                <a
+                  href="https://chromewebstore.google.com/detail/tabflow-for-youtube/gfdjgilpbpkooldnpghhgpfeacfllebm"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-400/50 rounded-xl transition-all group/store"
+                >
+                  <ChromeIcon className="w-3.5 h-3.5 text-cyan-400 group-hover/store:text-cyan-300" />
+                  <span>Chrome Web Store</span>
+                </a>
+              </div>
 
               <a
                 href="https://github.com/saadkhan955/youtube-tabs-to-playlist"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-colors"
+                className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-xl transition-colors"
               >
                 <GithubIcon className="w-3.5 h-3.5" />
-                <span>Source Code</span>
+                <span>Source</span>
               </a>
             </div>
           </div>
@@ -148,8 +161,9 @@ export const ExtensionsShowcase: React.FC = () => {
                   </div>
                 </div>
 
-                <span className="px-2.5 py-1 text-[11px] font-bold rounded-full bg-slate-800 text-slate-300 border border-slate-700 shrink-0">
-                  Live on Cloudflare
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-bold rounded-full bg-emerald-950/80 text-emerald-300 border border-emerald-800/60 shrink-0">
+                  <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse" />
+                  <span>Live on Chrome Web Store</span>
                 </span>
               </div>
 
@@ -157,7 +171,7 @@ export const ExtensionsShowcase: React.FC = () => {
                 Lightweight developer productivity tool that formats and exports active window or all-window tab URLs into Markdown, HTML, CSV, or Plain Text with customizable delimiters and keyboard shortcuts.
               </p>
 
-              {/* Interactive Mockup Container */}
+              {/* Feature Highlights Mockup Container */}
               <div className="p-4 rounded-2xl bg-slate-950/80 border border-slate-800/80 mb-6 space-y-3 font-mono text-xs">
                 <div className="flex items-center justify-between text-slate-400 border-b border-slate-800 pb-2 text-[11px]">
                   <span className="flex items-center gap-1.5 font-sans font-semibold text-slate-300">
@@ -193,26 +207,38 @@ export const ExtensionsShowcase: React.FC = () => {
               </div>
             </div>
 
-            {/* Actions */}
-            <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-3">
-              <a
-                href="https://tuc.khansaad.dev/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-2 px-4 py-2 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-xl transition-all shadow-md shadow-cyan-500/20"
-              >
-                <span>tuc.khansaad.dev</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
-              </a>
+            {/* Actions: Live Site, Chrome Web Store, Source Code */}
+            <div className="pt-4 border-t border-slate-800 flex flex-wrap items-center justify-between gap-2.5">
+              <div className="flex flex-wrap items-center gap-2">
+                <a
+                  href="https://tuc.khansaad.dev/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-xl transition-all shadow-md shadow-cyan-500/20"
+                >
+                  <span>tuc.khansaad.dev</span>
+                  <ArrowUpRight className="w-3.5 h-3.5" />
+                </a>
+
+                <a
+                  href="https://chromewebstore.google.com/detail/tab-url-copier/nbnehobinolaclgihaobabohgghfdlmg"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-bold text-white bg-slate-800 hover:bg-slate-700 border border-slate-700 hover:border-cyan-400/50 rounded-xl transition-all group/store"
+                >
+                  <ChromeIcon className="w-3.5 h-3.5 text-cyan-400 group-hover/store:text-cyan-300" />
+                  <span>Chrome Web Store</span>
+                </a>
+              </div>
 
               <a
                 href="https://github.com/saadkhan955/tab-url-copier"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-slate-300 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-xl transition-colors"
+                className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-xl transition-colors"
               >
                 <GithubIcon className="w-3.5 h-3.5" />
-                <span>Source Code</span>
+                <span>Source</span>
               </a>
             </div>
           </div>
