@@ -433,6 +433,7 @@ export const PROJECTS: Project[] = [
       { label: 'Platform', value: 'macOS Menu Bar' }
     ],
     featured: false,
+    githubUrl: 'https://github.com/saadkhan955/automatic-mouse-mover',
     keyContributions: [
       'Configured universal binary build pipeline supporting both Apple Silicon and Intel Macs.',
       'Added user-configurable movement interval presets and idle sleep prevention options.'
