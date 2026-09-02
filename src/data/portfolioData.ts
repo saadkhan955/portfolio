@@ -347,7 +347,7 @@ export const PROJECTS: Project[] = [
     timeframe: '2026',
     description: 'Modern full-stack web platform built with TanStack Start, React 19, TypeScript, Tailwind CSS, and automated document print layouts.',
     longDescription: 'Architected and engineered a comprehensive commercial web platform. Built with modern React 19 and TanStack Start, featuring interactive equipment showcases, optimized hero image loading, and dynamic PDF document layout capabilities.',
-    liveUrl: 'https://icarewatersolution.com',
+    liveUrl: 'https://icarewatersolutions.com',
     githubUrl: 'https://github.com/saadkhan955',
     techStack: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS', 'Vite', 'React-PDF'],
     metrics: [
