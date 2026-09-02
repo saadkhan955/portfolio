@@ -6,13 +6,6 @@ export type ProjectCategory =
   | 'mobile-native'
   | 'tools-oss';
 
-export interface TicketReference {
-  code: string;
-  title: string;
-  description?: string;
-  pr?: string;
-}
-
 export interface Project {
   id: string;
   title: string;
@@ -30,7 +23,6 @@ export interface Project {
     value: string;
   }[];
   featured: boolean;
-  tickets?: TicketReference[];
   architectureHighlights?: string[];
   keyContributions: string[];
 }

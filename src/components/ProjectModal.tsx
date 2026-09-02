@@ -1,5 +1,5 @@
 import React from 'react';
-import { X, ExternalLink, Ticket, CheckCircle2, Cpu } from 'lucide-react';
+import { X, ExternalLink, CheckCircle2, Cpu } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { Project } from '../types';
 
@@ -85,38 +85,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
             </div>
           )}
 
-          {project.tickets && project.tickets.length > 0 && (
-            <div>
-              <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
-                <Ticket className="w-4 h-4 text-sky-400" />
-                <span>Verified Tickets & PR Reference Deliverables</span>
-              </div>
-              <div className="space-y-2">
-                {project.tickets.map((t, idx) => (
-                  <div key={idx} className="p-3 bg-slate-950/60 border border-slate-800 rounded-lg flex items-start justify-between gap-3 text-xs">
-                    <div className="flex items-start gap-2.5">
-                      <span className="px-2 py-0.5 bg-slate-800 text-sky-300 font-mono font-bold rounded text-[11px] shrink-0">
-                        {t.code}
-                      </span>
-                      <span className="text-slate-200 font-medium">
-                        {t.title}
-                      </span>
-                    </div>
-                    {t.pr && (
-                      <span className="text-[11px] text-slate-400 font-mono shrink-0">
-                        {t.pr}
-                      </span>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
           {project.keyContributions && project.keyContributions.length > 0 && (
             <div>
               <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">
-                Key Engineering Contributions
+                Key Engineering Highlights
               </h4>
               <ul className="space-y-2">
                 {project.keyContributions.map((c, idx) => (

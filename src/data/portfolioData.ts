@@ -7,7 +7,7 @@ export const PERSONAL_INFO = {
   location: 'Mumbai, India',
   email: 'saadkhan955@gmail.com',
   github: 'https://github.com/saadkhan955',
-  bio: 'Frontend Developer with 5+ years of experience engineering resilient, high-performance web applications across Drupal 10/11 and React/TypeScript ecosystems. Specialized in component-driven theming, design systems, Core Web Vitals optimization, GDPR compliance, and offline-first modern applications.',
+  bio: 'Frontend Developer with 5+ years of experience engineering resilient, high-performance web applications across Drupal and React/TypeScript ecosystems. Specialized in component-driven theming, design systems, Core Web Vitals optimization, GDPR compliance, and offline-first modern applications.',
   experienceYears: '5+',
   enterpriseProjectsCount: '15+',
   productionCommits: '350+',
@@ -22,34 +22,25 @@ export const PROJECTS: Project[] = [
     category: 'enterprise-drupal',
     clientOrOrg: 'Royal Air Force Benevolent Fund (UK)',
     timeframe: '2026',
-    description: 'High-traffic Drupal 11 fundraising platform with Stripe donation workflows, Google Consent Mode v2, and rigorous Core Web Vitals optimizations.',
+    description: 'High-traffic fundraising platform featuring custom donation flows, Google Consent Mode v2, and rigorous Core Web Vitals optimizations.',
     longDescription: 'Engineered mission-critical fundraising features and performance overhauls for the UK’s leading RAF charity. Implemented full donation signpost hero widgets, automated Stripe donor metadata capture with self-healing webform sync, OneTrust cookie banner CLS containment, and dynamic social preview metatags.',
     liveUrl: 'https://rafbf.org',
     techStack: ['Drupal 11', 'PHP 8.3', 'Stripe API', 'Twig', 'Tailwind CSS', 'OneTrust GDPR', 'Google Consent Mode v2', 'DDEV', 'Composer'],
     metrics: [
-      { label: 'Commits Landed', value: '140+' },
       { label: 'Payload Reduction', value: '-3MB (Video Facade)' },
-      { label: 'PHP / Core', value: 'PHP 8.3 / Drupal 11' },
-      { label: 'Compliance', value: 'GDPR + Gift Aid' }
+      { label: 'Core / PHP', value: 'Drupal 11 / PHP 8.3' },
+      { label: 'Donation Engine', value: 'Stripe + Gift Aid' },
+      { label: 'Compliance', value: 'GDPR OneTrust v2' }
     ],
     featured: true,
-    tickets: [
-      { code: 'RAF-1208', title: 'Donation signpost block hero layout & card styling', pr: '#507, #510' },
-      { code: 'RAF-1149', title: 'Core Web Vitals & OneTrust Consent Mode v2 integration', pr: '#511' },
-      { code: 'RAF-1199', title: 'Stripe donor metadata capture & webform recovery', pr: '#502' },
-      { code: 'RAF-1216', title: 'Gift Aid taxpayer opt-out compliance selector', pr: '#499, #505' },
-      { code: 'RAF-1214', title: 'In-page navigation paragraph with smooth scroll', pr: '#500, #506' },
-      { code: 'RAF-1210', title: 'Centralized entity usage dashboard & Excel export', pr: '#509' },
-      { code: 'RF-1165', title: 'Drupal 11 Core Upgrade & Twig deprecation cleanup', pr: '#490, #496' }
-    ],
     architectureHighlights: [
       'Engineered YouTube iframe facade with srcdoc attributes, eliminating 3MB of blocking player scripts on initial page load.',
       'Containerized OneTrust/CookiePro banners with CSS layout containment, neutralizing layout shifts (CLS < 0.02).',
       'Synchronized Google Consent Mode v2 defaults with Tag Manager datalayer before script container execution.',
-      'Self-healing Stripe webhook handler capturing lost donor metadata and auto-reconciling webform submissions.'
+      'Built a self-healing Stripe webhook handler capturing donor metadata and auto-reconciling webform submissions.'
     ],
     keyContributions: [
-      'Built donation widget component with dynamic hero variations and responsive card padding.',
+      'Built donation widget component with dynamic hero variations and responsive card layouts.',
       'Upgraded core from Drupal 10 to Drupal 11 with PHP 8.3 config and custom MySQL 5.7 driver bridge.',
       'Added in-page table-of-contents navigation paragraph across News and Event content types.',
       'Built automated administrative entity usage dashboard with xlsx export.'
@@ -62,34 +53,25 @@ export const PROJECTS: Project[] = [
     category: 'enterprise-drupal',
     clientOrOrg: 'Adder Technology (Global)',
     timeframe: '2026',
-    description: 'Enterprise Drupal multi-region platform featuring custom paragraph design systems, Auto FAQ accordion engines, responsive video embeds, and search tokenization.',
+    description: 'Enterprise multi-region platform featuring custom paragraph design systems, Auto FAQ accordion engines, responsive video embeds, and search tokenization.',
     longDescription: 'Maintained and enhanced Adder Technology’s multi-region digital presence. Built versatile Auto FAQ accordion paragraphs supporting dynamic colour schemes, resolved video autoplay positioning across Vimeo and YouTube, patched search hyphen tokenization, and implemented AI discovery endpoints via llms.txt.',
     liveUrl: 'https://adder.com',
     techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'SCSS', 'Search API', 'llms.txt', 'Acquia Cloud', 'Composer'],
     metrics: [
-      { label: 'PRs & Commits', value: '58 Commits' },
-      { label: 'Tickets Solved', value: '25+ JIRA Issues' },
-      { label: 'Security Fixes', value: 'SA-CONTRIB-2026-096' },
-      { label: 'Layout Shift', value: '0 CLS on 360 Spin' }
+      { label: 'Design System', value: 'Auto FAQ Accordions' },
+      { label: 'Layout Shift', value: '0 CLS on 360 Spin' },
+      { label: 'Video Embeds', value: 'Responsive Autoplay' },
+      { label: 'AI Discovery', value: 'llms.txt Standard' }
     ],
     featured: true,
-    tickets: [
-      { code: 'ADD-844', title: 'Accordion text colour inheritance & CTA buttons in Auto FAQ', pr: '#763, #771' },
-      { code: 'ADD-800', title: 'SVG chevron mask icon for paragraph colour schemes', pr: '#765' },
-      { code: 'ADD-928', title: 'Fix Vimeo/YouTube background video autoplay and layout', pr: '#752' },
-      { code: 'ADD-930', title: 'Hyphenated keyword search tokenization fix', pr: '#758' },
-      { code: 'ADD-952', title: 'Security Advisory SA-CONTRIB-2026-096 Diff update', pr: '#766' },
-      { code: 'ADD-767', title: 'Install llms_txt module for AI search agents', pr: '#755' },
-      { code: 'ADD-932', title: 'Reserve 360-degree spin container dimensions for zero CLS', pr: '#756' }
-    ],
     architectureHighlights: [
       'Implemented CSS mask-image techniques for SVG accordion chevrons to seamlessly inherit theme color variables.',
-      'Fixed search tokenizer treating hyphens as negation operators to ensure product model searches succeed.',
+      'Optimized search tokenizer treating hyphens to ensure precise product model searches succeed.',
       'Stabilized responsive 360-degree product viewport aspect ratios to prevent content reflow during asset download.'
     ],
     keyContributions: [
       'Engineered Auto FAQ accordion paragraph component supporting dynamic high-contrast brand colour schemes.',
-      'Applied SA-CONTRIB security patches for Entity Browser and Diff modules.',
+      'Applied routine security patches for Entity Browser and Diff modules.',
       'Integrated llms.txt configuration to expose structured site discovery to AI search crawlers.'
     ]
   },
@@ -106,18 +88,11 @@ export const PROJECTS: Project[] = [
     techStack: ['Drupal 10', 'PHP 8.3', 'Search API DB', 'CleanTalk', 'Acquia Cloud', 'Sentry', 'Twig'],
     metrics: [
       { label: 'Search Backend', value: 'Search API DB' },
-      { label: 'PR Merges', value: '15+ PRs' },
       { label: 'Security / Privacy', value: 'Cookie-Free Sessions' },
-      { label: 'Stability', value: '100% Acquia Sync Pass' }
+      { label: 'Error Monitoring', value: 'Sentry Production' },
+      { label: 'Cloud Sync', value: '100% Clean Sync' }
     ],
     featured: true,
-    tickets: [
-      { code: 'LDC-422', title: 'Migrate search backend from Solr to Search API Database', pr: '#668, #669' },
-      { code: 'LDC-425', title: 'Enable cookie-free alternative session storage for CleanTalk', pr: '#667' },
-      { code: 'LDC-410', title: 'Remove SQL triggers causing database copy failures on Acquia', pr: '#671' },
-      { code: 'LDC-426', title: 'Full image aspect ratio options for image slice paragraphs', pr: '#670' },
-      { code: 'LDC-412', title: 'Filter unpublished nodes from main navigation hierarchy', pr: '#663' }
-    ],
     architectureHighlights: [
       'Migrated search indexing pipeline from Apache Solr to search_api_db with custom rendered item view modes, cutting infrastructure costs while retaining search relevancy.',
       'Sanitized Acquia database duplication pipeline by eliminating orphan MySQL trigger routines.'
@@ -141,22 +116,15 @@ export const PROJECTS: Project[] = [
     metrics: [
       { label: 'Core Version', value: 'Drupal 10.6.13' },
       { label: 'Commerce Engine', value: 'Commerce 3.3.6' },
-      { label: 'Security PRs', value: '8 Critical Patches' },
-      { label: 'GDPR Migration', value: '100% User Consent' }
+      { label: 'GDPR Consent', value: '100% Compliant' },
+      { label: 'Architecture', value: 'Headless / Hybrid' }
     ],
     featured: false,
-    tickets: [
-      { code: 'LPE-208', title: 'Security update - Drupal Core 10.6.13 & Guzzle 7.15.1', pr: '#118' },
-      { code: 'LPE-181', title: 'Convert newsletter registration checkbox to GDPR opt-in', pr: '#112' },
-      { code: 'LPE-192', title: 'Fix commerce order schema and install missing version field', pr: '#114' },
-      { code: 'LPE-193', title: 'Drop orphaned BAT booking database tables', pr: '#116' },
-      { code: 'LPE-199', title: 'Drupal Commerce 3.3.6 security upgrade', pr: '#115' }
-    ],
     architectureHighlights: [
-      'Resolved complex Composer dependency conflicts across drupal/core-recommended, Guzzle, and psr7 packages to enforce zero-vulnerability builds.'
+      'Resolved complex Composer dependency conflicts across core-recommended, Guzzle, and PSR packages to enforce zero-vulnerability builds.'
     ],
     keyContributions: [
-      'Executed schema update hooks repairing corrupt commerce_order entity definitions.',
+      'Executed schema update hooks repairing commerce_order entity definitions.',
       'Standardized user consent capture across checkout and registration forms.'
     ]
   },
@@ -173,10 +141,10 @@ export const PROJECTS: Project[] = [
     githubUrl: 'https://github.com/saadkhan955',
     techStack: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS', 'Vite', 'React-PDF', 'Oxlint'],
     metrics: [
-      { label: 'Commits', value: '140+ Commits' },
       { label: 'React Engine', value: 'React 19 Reconciler' },
       { label: 'Lighthouse Score', value: '98+ Performance' },
-      { label: 'Architecture', value: 'ERP Monorepo' }
+      { label: 'Architecture', value: 'ERP Monorepo' },
+      { label: 'Document Engine', value: 'Live PDF Print' }
     ],
     featured: true,
     architectureHighlights: [
@@ -205,7 +173,7 @@ export const PROJECTS: Project[] = [
       { label: 'Resolutions', value: '16x16 to 512x512' },
       { label: 'Formats', value: 'ICO, PNG, SVG, ZIP' },
       { label: 'Mobile App', value: 'Android Signed APK' },
-      { label: 'Commits', value: '63 Commits' }
+      { label: 'Engine', value: 'Client Canvas API' }
     ],
     featured: true,
     architectureHighlights: [
@@ -253,14 +221,14 @@ export const PROJECTS: Project[] = [
     timeframe: '2026',
     description: 'Manifest V3 Chrome extension and landing page that converts all open YouTube tabs into organized, trackable YouTube playlists with instant theme switching.',
     longDescription: 'Created a tab-organizing browser extension built strictly under Chrome Extension Manifest V3 security requirements (zero inline scripts, CSP-compliant). Features automatic light/dark theme synchronization, live playlist sync, and a Cloudflare-hosted landing page.',
-    liveUrl: 'https://saadkhan955.github.io/youtube-tabs-to-playlist',
+    liveUrl: 'https://tfy.khansaad.dev/',
     githubUrl: 'https://github.com/saadkhan955/youtube-tabs-to-playlist',
     techStack: ['JavaScript (ES6+)', 'Chrome Extension API (MV3)', 'Tailwind CSS', 'HTML5', 'Cloudflare Pages'],
     metrics: [
       { label: 'Extension Spec', value: 'Chrome MV3' },
-      { label: 'Commits', value: '21 Commits' },
       { label: 'Security', value: '100% CSP Compliant' },
-      { label: 'Theme Support', value: 'Dark / Light / Auto' }
+      { label: 'Theme Support', value: 'Dark / Light / Auto' },
+      { label: 'Hosting', value: 'Cloudflare Pages' }
     ],
     featured: false,
     architectureHighlights: [
@@ -280,12 +248,13 @@ export const PROJECTS: Project[] = [
     timeframe: '2026',
     description: 'Lightweight browser extension allowing instant batch copying of active browser tabs in Markdown, HTML, Plain Text, or CSV formats.',
     longDescription: 'Engineered a developer productivity tool that formats and exports active window or all-window tab URLs with custom templates and keyboard shortcuts.',
-    liveUrl: 'https://saadkhan955.github.io/tab-url-copier',
+    liveUrl: 'https://tuc.khansaad.dev/',
     githubUrl: 'https://github.com/saadkhan955/tab-url-copier',
-    techStack: ['JavaScript', 'Chrome Extension API', 'HTML5', 'CSS3', 'Cloudflare Wrangler'],
+    techStack: ['JavaScript', 'Chrome Extension API', 'HTML5', 'CSS3', 'Cloudflare Pages'],
     metrics: [
       { label: 'Export Modes', value: 'Markdown, HTML, CSV, Text' },
-      { label: 'Speed', value: '< 10ms Execution' },
+      { label: 'Performance', value: '< 10ms Execution' },
+      { label: 'Security', value: 'Zero External Calls' },
       { label: 'Hosting', value: 'Cloudflare Pages' }
     ],
     featured: false,
@@ -307,7 +276,8 @@ export const PROJECTS: Project[] = [
     metrics: [
       { label: 'Privacy', value: '100% Offline (No Cloud)' },
       { label: 'ML Engine', value: 'Selfie Segmentation' },
-      { label: 'Min SDK', value: 'Android SDK 21+' }
+      { label: 'Min SDK', value: 'Android SDK 21+' },
+      { label: 'Network Calls', value: '0 (Air-Gapped)' }
     ],
     featured: false,
     architectureHighlights: [

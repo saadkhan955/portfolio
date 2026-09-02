@@ -29,8 +29,7 @@ export const ProjectSection: React.FC = () => {
         p.subtitle.toLowerCase().includes(q) ||
         p.description.toLowerCase().includes(q) ||
         (p.clientOrOrg && p.clientOrOrg.toLowerCase().includes(q)) ||
-        p.techStack.some((t) => t.toLowerCase().includes(q)) ||
-        (p.tickets && p.tickets.some((t) => t.code.toLowerCase().includes(q) || t.title.toLowerCase().includes(q)));
+        p.techStack.some((t) => t.toLowerCase().includes(q));
 
       return matchesCategory && matchesQuery;
     });
@@ -50,7 +49,7 @@ export const ProjectSection: React.FC = () => {
               Featured Work & Enterprise Deliveries
             </h2>
             <p className="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
-              Every project listed here is backed by concrete repositories, production commits, JIRA tickets, and performance overhauls.
+              Production web applications, component design systems, and high-performance frontend architectures.
             </p>
           </div>
 
@@ -58,7 +57,7 @@ export const ProjectSection: React.FC = () => {
             <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
             <input
               type="text"
-              placeholder="Filter by tech, ticket, client..."
+              placeholder="Filter by technology, framework, client..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full pl-9 pr-4 py-2.5 text-xs bg-slate-900 border border-slate-800 rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-500 transition-colors"
