@@ -15,7 +15,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    projectType: 'Drupal Theming & Upgrades',
+    projectType: 'Drupal 10/11 Architecture & Upgrades',
     message: '',
   });
 
@@ -50,18 +50,18 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
     setErrors({});
     setIsSubmitting(true);
 
-    // Prepare mailto fallback URL
+    // Prepare mailto fallback URL to saadkhan955@gmail.com
     const subject = encodeURIComponent(`[Portfolio Inquiry] ${formData.projectType} - from ${formData.name}`);
     const body = encodeURIComponent(
-      `Name: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}`
+      `Hi Saad,\n\nName: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}\n\n---\nSent from saadkhan.dev portfolio`
     );
 
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-      // Trigger default email client pre-filled
+      // Trigger default email client pre-filled directly to Saad's email
       window.location.href = `mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`;
-    }, 600);
+    }, 500);
   };
 
   const handleReset = () => {
@@ -69,7 +69,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
     setFormData({
       name: '',
       email: '',
-      projectType: 'Drupal Theming & Upgrades',
+      projectType: 'Drupal 10/11 Architecture & Upgrades',
       message: '',
     });
     setErrors({});
@@ -83,7 +83,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
           
           <div className="absolute -right-20 -bottom-20 w-96 h-96 bg-cyan-500/10 blur-[120px] rounded-full pointer-events-none" />
 
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-5xl mx-auto">
             
             {/* Top Header */}
             <div className="text-center mb-12">
@@ -97,143 +97,145 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl mx-auto">
-                Have an upcoming Drupal project, React web application, or frontend performance requirement? Leave a message below or connect directly.
+                Have an upcoming Drupal project, React web application, or custom backend requirement? Leave a message below or connect directly.
               </p>
             </div>
 
-            {/* Split Content: Form on Left, Contact Details on Right */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+            {/* Split Content: Grid with stretch items to match heights exactly */}
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 items-stretch">
               
               {/* Interactive Contact Form (7 cols) */}
-              <div className="lg:col-span-7 bg-slate-950/70 border border-slate-800/90 rounded-2xl p-6 sm:p-8 shadow-xl">
+              <div className="lg:col-span-7 bg-slate-950/80 border border-slate-800/90 rounded-2xl p-6 sm:p-8 shadow-xl flex flex-col justify-between">
                 
                 {submitted ? (
-                  <div className="py-10 text-center space-y-4">
+                  <div className="py-12 text-center space-y-4 my-auto">
                     <div className="w-14 h-14 rounded-2xl bg-cyan-950 border border-cyan-800/60 flex items-center justify-center text-cyan-400 mx-auto">
                       <CheckCircle2 className="w-7 h-7" />
                     </div>
                     <h3 className="text-xl font-bold text-white">
-                      Message Prepared!
+                      Inquiry Dispatched to {PERSONAL_INFO.email}!
                     </h3>
                     <p className="text-xs sm:text-sm text-slate-300 max-w-sm mx-auto">
-                      Your default mail client has been opened with your pre-filled inquiry. You can also send another message anytime.
+                      Your default mail client has opened with your inquiry pre-filled to <strong>{PERSONAL_INFO.email}</strong>.
                     </p>
                     <button
                       type="button"
                       onClick={handleReset}
-                      className="px-5 py-2.5 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-white transition-colors cursor-pointer"
+                      className="px-5 py-2.5 text-xs font-bold rounded-xl bg-slate-800 hover:bg-slate-700 text-white transition-colors cursor-pointer mt-2"
                     >
                       Send Another Message
                     </button>
                   </div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
+                  <form onSubmit={handleSubmit} className="flex flex-col justify-between h-full space-y-4">
                     
-                    {/* Name Field */}
-                    <div>
-                      <label htmlFor="contact-name" className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Your Name <span className="text-cyan-400">*</span>
-                      </label>
-                      <div className="relative">
-                        <User className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                        <input
-                          id="contact-name"
-                          type="text"
-                          placeholder="e.g. Sarah Jenkins"
-                          value={formData.name}
-                          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                          className={`w-full pl-10 pr-4 py-2.5 text-xs bg-slate-900 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors ${
-                            errors.name ? 'border-rose-500/80' : 'border-slate-800'
+                    <div className="space-y-4">
+                      {/* Name Field */}
+                      <div>
+                        <label htmlFor="contact-name" className="block text-xs font-semibold text-slate-300 mb-1.5">
+                          Your Name <span className="text-cyan-400">*</span>
+                        </label>
+                        <div className="relative">
+                          <User className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <input
+                            id="contact-name"
+                            type="text"
+                            placeholder="e.g. Sarah Jenkins"
+                            value={formData.name}
+                            onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+                            className={`w-full pl-10 pr-4 py-2.5 text-xs bg-slate-900 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors ${
+                              errors.name ? 'border-rose-500/80' : 'border-slate-800'
+                            }`}
+                          />
+                        </div>
+                        {errors.name && (
+                          <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
+                            <AlertCircle className="w-3 h-3" />
+                            <span>{errors.name}</span>
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Email Field */}
+                      <div>
+                        <label htmlFor="contact-email" className="block text-xs font-semibold text-slate-300 mb-1.5">
+                          Your Email <span className="text-cyan-400">*</span>
+                        </label>
+                        <div className="relative">
+                          <Mail className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <input
+                            id="contact-email"
+                            type="email"
+                            placeholder="e.g. sarah@example.com"
+                            value={formData.email}
+                            onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                            className={`w-full pl-10 pr-4 py-2.5 text-xs bg-slate-900 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors ${
+                              errors.email ? 'border-rose-500/80' : 'border-slate-800'
+                            }`}
+                          />
+                        </div>
+                        {errors.email && (
+                          <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
+                            <AlertCircle className="w-3 h-3" />
+                            <span>{errors.email}</span>
+                          </p>
+                        )}
+                      </div>
+
+                      {/* Project / Inquiry Type */}
+                      <div>
+                        <label htmlFor="contact-type" className="block text-xs font-semibold text-slate-300 mb-1.5">
+                          Area of Interest
+                        </label>
+                        <div className="relative">
+                          <Tag className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <select
+                            id="contact-type"
+                            value={formData.projectType}
+                            onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
+                            className="w-full pl-10 pr-8 py-2.5 text-xs bg-slate-900 border border-slate-800 rounded-xl text-white focus:outline-none focus:border-cyan-400 transition-colors appearance-none cursor-pointer"
+                          >
+                            <option value="Drupal 10/11 Architecture & Upgrades">Drupal 10/11 Architecture & Core Upgrades</option>
+                            <option value="Custom Module & Backend PHP Development">Custom Module & Backend PHP 8.3 Development</option>
+                            <option value="React & TypeScript Development">React & TypeScript Web Application</option>
+                            <option value="Search API & Performance Optimization">Search API & Core Web Vitals Optimization</option>
+                            <option value="General Technical Consultation / Hiring">General Technical Consultation / Hiring</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      {/* Message Area */}
+                      <div>
+                        <label htmlFor="contact-message" className="block text-xs font-semibold text-slate-300 mb-1.5">
+                          Message Details <span className="text-cyan-400">*</span>
+                        </label>
+                        <textarea
+                          id="contact-message"
+                          rows={4}
+                          placeholder="Tell me a bit about your project, goals, or timeline..."
+                          value={formData.message}
+                          onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                          className={`w-full p-3.5 text-xs bg-slate-900 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors resize-none ${
+                            errors.message ? 'border-rose-500/80' : 'border-slate-800'
                           }`}
                         />
+                        {errors.message && (
+                          <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
+                            <AlertCircle className="w-3 h-3" />
+                            <span>{errors.message}</span>
+                          </p>
+                        )}
                       </div>
-                      {errors.name && (
-                        <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
-                          <span>{errors.name}</span>
-                        </p>
-                      )}
-                    </div>
-
-                    {/* Email Field */}
-                    <div>
-                      <label htmlFor="contact-email" className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Your Email <span className="text-cyan-400">*</span>
-                      </label>
-                      <div className="relative">
-                        <Mail className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                        <input
-                          id="contact-email"
-                          type="email"
-                          placeholder="e.g. sarah@example.com"
-                          value={formData.email}
-                          onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                          className={`w-full pl-10 pr-4 py-2.5 text-xs bg-slate-900 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors ${
-                            errors.email ? 'border-rose-500/80' : 'border-slate-800'
-                          }`}
-                        />
-                      </div>
-                      {errors.email && (
-                        <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
-                          <span>{errors.email}</span>
-                        </p>
-                      )}
-                    </div>
-
-                    {/* Project / Inquiry Type */}
-                    <div>
-                      <label htmlFor="contact-type" className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Area of Interest
-                      </label>
-                      <div className="relative">
-                        <Tag className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
-                        <select
-                          id="contact-type"
-                          value={formData.projectType}
-                          onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
-                          className="w-full pl-10 pr-8 py-2.5 text-xs bg-slate-900 border border-slate-800 rounded-xl text-white focus:outline-none focus:border-cyan-400 transition-colors appearance-none cursor-pointer"
-                        >
-                          <option value="Drupal Theming & Upgrades">Drupal Theming & Core Upgrades</option>
-                          <option value="React & TypeScript Development">React & TypeScript Web Application</option>
-                          <option value="Core Web Vitals & Performance">Core Web Vitals & Speed Optimization</option>
-                          <option value="Design System & Accessible UI">Design System & Accessible UI Engineering</option>
-                          <option value="General Technical Consultation">General Technical Consultation / Hiring</option>
-                        </select>
-                      </div>
-                    </div>
-
-                    {/* Message Area */}
-                    <div>
-                      <label htmlFor="contact-message" className="block text-xs font-semibold text-slate-300 mb-1.5">
-                        Message Details <span className="text-cyan-400">*</span>
-                      </label>
-                      <textarea
-                        id="contact-message"
-                        rows={4}
-                        placeholder="Tell me a bit about your project, goals, or timeline..."
-                        value={formData.message}
-                        onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                        className={`w-full p-3.5 text-xs bg-slate-900 border rounded-xl text-white placeholder-slate-500 focus:outline-none focus:border-cyan-400 transition-colors resize-none ${
-                          errors.message ? 'border-rose-500/80' : 'border-slate-800'
-                        }`}
-                      />
-                      {errors.message && (
-                        <p className="text-[11px] text-rose-400 mt-1 flex items-center gap-1">
-                          <AlertCircle className="w-3 h-3" />
-                          <span>{errors.message}</span>
-                        </p>
-                      )}
                     </div>
 
                     {/* Submit Button */}
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full py-3 px-6 text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 rounded-xl transition-all shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/30 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                      className="w-full py-3 px-6 text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 rounded-xl transition-all shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/30 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-4"
                     >
                       {isSubmitting ? (
-                        <span>Sending message...</span>
+                        <span>Preparing email...</span>
                       ) : (
                         <>
                           <Send className="w-3.5 h-3.5" />
@@ -246,17 +248,17 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
 
               </div>
 
-              {/* Direct Info & Actions on Right (5 cols) */}
-              <div className="lg:col-span-5 space-y-4">
+              {/* Direct Info & Actions on Right (5 cols) - Equal height flex distribution */}
+              <div className="lg:col-span-5 flex flex-col justify-between gap-4 h-full">
                 
                 {/* Email Copy Card */}
-                <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 flex items-center justify-between gap-3 group">
-                  <div className="flex items-center gap-3 overflow-hidden">
-                    <div className="w-11 h-11 rounded-xl bg-cyan-950/80 border border-cyan-800/60 flex items-center justify-center text-cyan-400 shrink-0">
+                <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 flex items-center justify-between gap-3 group flex-1">
+                  <div className="flex items-center gap-3.5 overflow-hidden">
+                    <div className="w-12 h-12 rounded-xl bg-cyan-950/80 border border-cyan-800/60 flex items-center justify-center text-cyan-400 shrink-0">
                       <Mail className="w-5 h-5" />
                     </div>
                     <div className="overflow-hidden">
-                      <div className="text-[11px] text-slate-400 font-medium">Direct Email</div>
+                      <div className="text-[11px] text-slate-400 font-medium">Direct Email Inbox</div>
                       <div className="text-xs sm:text-sm font-bold text-white truncate">{PERSONAL_INFO.email}</div>
                     </div>
                   </div>
@@ -264,7 +266,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                   <button
                     onClick={handleCopyEmail}
                     aria-label="Copy Email"
-                    className="p-2 text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-700 rounded-lg transition-colors shrink-0 cursor-pointer"
+                    className="p-2.5 text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-700 rounded-lg transition-colors shrink-0 cursor-pointer"
                   >
                     {copied ? <Check className="w-4 h-4 text-emerald-400" /> : <Copy className="w-4 h-4" />}
                   </button>
@@ -275,10 +277,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                   href={PERSONAL_INFO.github}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-slate-700 flex items-center justify-between gap-3 group transition-colors block"
+                  className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 hover:border-slate-700 flex items-center justify-between gap-3 group transition-colors flex-1"
                 >
-                  <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform">
+                  <div className="flex items-center gap-3.5">
+                    <div className="w-12 h-12 rounded-xl bg-slate-800 border border-slate-700 flex items-center justify-center text-white shrink-0 group-hover:scale-105 transition-transform">
                       <GithubIcon className="w-5 h-5" />
                     </div>
                     <div>
@@ -290,9 +292,9 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                 </a>
 
                 {/* Resume Download Card */}
-                <div className="p-5 rounded-2xl bg-slate-950/80 border border-slate-800 space-y-3">
-                  <div className="flex items-center gap-3">
-                    <div className="w-11 h-11 rounded-xl bg-sky-950/80 border border-sky-800/60 flex items-center justify-center text-sky-400 shrink-0">
+                <div className="p-6 rounded-2xl bg-slate-950/80 border border-slate-800 flex flex-col justify-between flex-1">
+                  <div className="flex items-center gap-3.5 mb-3">
+                    <div className="w-12 h-12 rounded-xl bg-sky-950/80 border border-sky-800/60 flex items-center justify-center text-sky-400 shrink-0">
                       <FileText className="w-5 h-5" />
                     </div>
                     <div>
