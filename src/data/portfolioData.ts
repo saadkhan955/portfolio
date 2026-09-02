@@ -5,7 +5,7 @@ export const PERSONAL_INFO = {
   role: 'Full-Stack Drupal Developer & Modern Web Engineer',
   status: 'Drupal Developer at ThisGainIndia (GAIN)',
   location: 'Mumbai, India',
-  email: 'saadkhan955@gmail.com',
+  email: 'contact@khansaad.dev',
   github: 'https://github.com/saadkhan955',
   bio: 'Full-Stack Drupal Developer with 5+ years of experience engineering scalable CMS architectures, custom PHP 8.3 modules, Search API pipelines, and high-performance React/TypeScript applications. Proven track record in Drupal 10/11 core migrations, custom backend services, payment engines, and Core Web Vitals optimization.',
   experienceYears: '5+',

@@ -84,7 +84,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
         </div>
 
         <div className="p-3 bg-slate-950 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 px-5">
-          <span>Contact: saadkhan955@gmail.com</span>
+          <span>Contact: contact@khansaad.dev</span>
           <span>Mumbai, India</span>
         </div>
       </div>
