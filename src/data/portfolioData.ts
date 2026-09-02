@@ -62,7 +62,8 @@ export const PROJECTS: Project[] = [
     featured: true,
     keyContributions: [
       'Diagnosed and resolved Search API tokenizer issues where hyphenated product model numbers were improperly stripped during indexing.',
-      'Applied critical security patches and Composer updates for Entity Browser and Diff modules.',
+      'Configured and resolved Drupal Feeds import pipelines, repairing asset mapping and image download synchronization during automated data imports.',
+      'Applied critical security patches and Composer updates for Entity Browser, Diff, and Feeds-related modules.',
       'Configured and deployed LLMS module integration to expose structured site discovery (llms.txt) for AI crawlers.',
       'Engineered reusable Auto FAQ accordion paragraph component supporting dynamic brand colour schemes and responsive video embeds.'
     ]
