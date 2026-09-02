@@ -160,25 +160,24 @@ export const PROJECTS: Project[] = [
   {
     id: 'mystic-favicon-studio',
     title: 'Mystic Favicon Studio',
-    subtitle: 'Web & Hybrid Mobile Favicon Generator (PWA + Android)',
+    subtitle: 'Vector & Raster Favicon Generator Web Application',
     category: 'react-fullstack',
     clientOrOrg: 'Independent Product',
     timeframe: '2026',
-    description: 'Comprehensive vector and bitmap favicon generation studio producing multi-resolution assets (16x16 to 512x512, ICO, Android mipmaps, Apple Touch icons).',
+    description: 'Comprehensive vector and bitmap favicon generation studio producing multi-resolution assets (16x16 to 512x512, ICO, Apple Touch icons, web manifests).',
     longDescription: 'Created a developer and designer utility supporting live SVG fill adaptation, squircle shape presets, safe margin rulers, real-time browser tab preview simulations, and one-click ZIP packaging with HTML header code snippet generator.',
     liveUrl: 'https://mysticfavicon.tech',
     githubUrl: 'https://github.com/saadkhan955',
-    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Canvas API', 'Capacitor', 'Android SDK'],
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Canvas API', 'Web Manifests'],
     metrics: [
       { label: 'Resolutions', value: '16x16 to 512x512' },
       { label: 'Formats', value: 'ICO, PNG, SVG, ZIP' },
-      { label: 'Mobile App', value: 'Android Signed APK' },
-      { label: 'Engine', value: 'Client Canvas API' }
+      { label: 'Engine', value: 'Client Canvas API' },
+      { label: 'Performance', value: 'Zero Server Roundtrips' }
     ],
     featured: true,
     architectureHighlights: [
-      'Engineered in-browser Canvas rendering pipeline creating crisp multi-layer ICO binaries without server roundtrips.',
-      'Configured Android Capacitor release keystore and automated production APK assembly.'
+      'Engineered in-browser Canvas rendering pipeline creating crisp multi-layer ICO binaries without server roundtrips.'
     ],
     keyContributions: [
       'Implemented Top 10 Web Design System color presets and real-time SVG currentColor replacement.',
@@ -187,28 +186,28 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 'ainexorium-platform',
-    title: 'Ainexorium Platform & Mobile App',
-    subtitle: 'EdTech Operations Platform & Android Management App',
-    category: 'mobile-native',
+    title: 'Ainexorium Platform',
+    subtitle: 'Full-Stack EdTech Operations & Staff Administration System',
+    category: 'react-fullstack',
     clientOrOrg: 'Ainexorium Digital',
     timeframe: '2026',
-    description: 'Full-stack education and staff administration platform with automated employee ID retirement pools, attendance tracking, and hybrid Android mobile app.',
-    longDescription: 'Engineered Ainexorium’s institutional dashboard and mobile management client. Features dynamic role filtering, automated staff ID reassignment workflows, daily attendance CSV auditing, and strict component-driven state architecture.',
+    description: 'Full-stack education and staff administration platform with automated employee ID retirement pools, attendance tracking, and responsive admin dashboard.',
+    longDescription: 'Engineered Ainexorium’s institutional web dashboard and staff management platform. Features dynamic role filtering, automated staff ID reassignment workflows, daily attendance CSV auditing, and strict component-driven state architecture.',
     liveUrl: 'https://ainexorium.com',
     githubUrl: 'https://github.com/saadkhan955',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Capacitor', 'Android APK', 'Oxlint'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'State Management', 'Oxlint'],
     metrics: [
-      { label: 'Platforms', value: 'Web + Android' },
-      { label: 'Release Build', value: 'APK v1.0.6' },
-      { label: 'Features', value: 'ID Pool Manager' },
-      { label: 'Code Quality', value: 'Anti-Slop Linted' }
+      { label: 'Platform', value: 'React Web Platform' },
+      { label: 'Features', value: 'Staff ID Pool Manager' },
+      { label: 'Code Quality', value: 'Anti-Slop Linted' },
+      { label: 'Reporting', value: 'Automated CSV Sync' }
     ],
     featured: false,
     architectureHighlights: [
       'Built a resilient ID lifecycle management system that moves deactivated employee IDs to a retired pool and prevents sequence gaps.'
     ],
     keyContributions: [
-      'Built TeamScreen mobile administration with role filtering pills and instant sync.',
+      'Built administration management with role filtering and instant data synchronization.',
       'Created attendance logging and automated monthly CSV export system.'
     ]
   },
@@ -261,31 +260,6 @@ export const PROJECTS: Project[] = [
     keyContributions: [
       'Created multi-format clipboard formatting engine with custom template delimiters.',
       'Deployed official landing page with OpenGraph metadata and canonical URL mapping.'
-    ]
-  },
-  {
-    id: 'passpic-ai',
-    title: 'PassPic AI / PassPhoto',
-    subtitle: '100% On-Device Biometric Passport Photo Studio',
-    category: 'mobile-native',
-    clientOrOrg: 'Mobile Product',
-    timeframe: '2026',
-    description: 'Privacy-first Flutter mobile application generating compliant biometric passport photos completely offline using on-device ML segmentation.',
-    longDescription: 'Developed an Android and iOS application utilizing Google ML Kit Selfie Segmentation to isolate portraits, replace backgrounds with compliant studio white/blue tones, and crop against international passport aspect ratio templates without network calls.',
-    techStack: ['Flutter', 'Dart', 'Google ML Kit', 'TFLite', 'CustomPainter', 'Image Processing'],
-    metrics: [
-      { label: 'Privacy', value: '100% Offline (No Cloud)' },
-      { label: 'ML Engine', value: 'Selfie Segmentation' },
-      { label: 'Min SDK', value: 'Android SDK 21+' },
-      { label: 'Network Calls', value: '0 (Air-Gapped)' }
-    ],
-    featured: false,
-    architectureHighlights: [
-      'Strict offline architecture guaranteeing zero user photo telemetry or cloud uploads.',
-      'Pixel-level coordinate mapping between CustomPainter viewfinder overlay and camera buffer matrix.'
-    ],
-    keyContributions: [
-      'Built viewport cropping engine with dynamic DPI print grid generator.'
     ]
   },
   {
@@ -430,8 +404,8 @@ export const SKILL_GROUPS: SkillGroup[] = [
     ]
   },
   {
-    name: 'Tools, DevOps & Mobile',
-    description: 'Containerized environments, cloud hosting, and cross-platform builds',
+    name: 'Tools, DevOps & Cloud',
+    description: 'Containerized environments, cloud hosting, and continuous deployment',
     iconName: 'Terminal',
     skills: [
       { name: 'DDEV & Lando Containers', level: 'Expert', highlight: true },
@@ -439,8 +413,6 @@ export const SKILL_GROUPS: SkillGroup[] = [
       { name: 'Acquia Cloud & Pantheon Hosting', level: 'Advanced', highlight: true },
       { name: 'Cloudflare Pages & Workers', level: 'Advanced', highlight: true },
       { name: 'Chrome Extensions (MV3)', level: 'Advanced', highlight: true },
-      { name: 'Android Capacitor & APK Releases', level: 'Advanced' },
-      { name: 'Flutter (Offline ML Kit)', level: 'Proficient' },
       { name: 'Git & Agile Sprint Workflows', level: 'Expert', highlight: true }
     ]
   }
@@ -479,17 +451,6 @@ export const ARCHITECTURE_CASE_STUDIES = [
     points: [
       'Attached structured donor metadata to Stripe payment intent sessions.',
       'Built asynchronous fallback reconciliation hook to automatically create missing webform submission records.'
-    ]
-  },
-  {
-    id: 'offline-ml',
-    title: '100% On-Device ML Biometric Pipeline',
-    category: 'Privacy & Mobile Engineering',
-    summary: 'Built PassPic AI Flutter application generating compliant biometric passport photos without sending images to any cloud API.',
-    impact: 'Zero cloud latency, zero server hosting costs, and complete privacy compliance for biometric data.',
-    points: [
-      'Employed Google ML Kit Selfie Segmentation TFLite model running locally on the device GPU/NPU.',
-      'Synchronized CustomPainter overlay coordinate bounding boxes with raw camera pixel buffers.'
     ]
   }
 ];

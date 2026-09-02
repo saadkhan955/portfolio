@@ -3,7 +3,6 @@ export type ProjectCategory =
   | 'enterprise-drupal'
   | 'react-fullstack'
   | 'chrome-extensions'
-  | 'mobile-native'
   | 'tools-oss';
 
 export interface Project {

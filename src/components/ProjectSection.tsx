@@ -1,5 +1,5 @@
 import React, { useState, useMemo } from 'react';
-import { Search, Filter, Layers, Code, Globe, Smartphone, Terminal, Sparkles } from 'lucide-react';
+import { Search, Filter, Layers, Code, Globe, Terminal, Sparkles } from 'lucide-react';
 import { PROJECTS } from '../data/portfolioData';
 import { Project, ProjectCategory } from '../types';
 import { ProjectCard } from './ProjectCard';
@@ -15,7 +15,6 @@ export const ProjectSection: React.FC = () => {
     { id: 'enterprise-drupal', label: 'Enterprise Drupal', icon: Globe },
     { id: 'react-fullstack', label: 'React & Full-Stack', icon: Code },
     { id: 'chrome-extensions', label: 'Chrome Extensions', icon: Terminal },
-    { id: 'mobile-native', label: 'Mobile & Native', icon: Smartphone },
     { id: 'tools-oss', label: 'Tools & Utilities', icon: Sparkles },
   ];
 
