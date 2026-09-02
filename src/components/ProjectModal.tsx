@@ -1,0 +1,184 @@
+import React from 'react';
+import { X, ExternalLink, Ticket, CheckCircle2, Cpu } from 'lucide-react';
+import { GithubIcon } from './Icons';
+import { Project } from '../types';
+
+interface ProjectModalProps {
+  project: Project | null;
+  onClose: () => void;
+}
+
+export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) => {
+  if (!project) return null;
+
+  return (
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/80 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200">
+      <div 
+        className="relative w-full max-w-3xl max-h-[90vh] overflow-y-auto bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-2xl text-slate-100"
+        role="dialog"
+        aria-modal="true"
+      >
+        <div className="flex items-start justify-between gap-4 pb-6 border-b border-slate-800">
+          <div>
+            <div className="flex items-center gap-2.5 mb-2">
+              <span className="px-2.5 py-0.5 text-[11px] font-bold rounded-full uppercase tracking-wider bg-cyan-950 text-cyan-400 border border-cyan-800/60">
+                {project.category.replace('-', ' ')}
+              </span>
+              {project.clientOrOrg && (
+                <span className="text-xs font-medium text-slate-400">
+                  {project.clientOrOrg}
+                </span>
+              )}
+            </div>
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
+              {project.title}
+            </h3>
+            <p className="text-sm text-cyan-300 font-medium mt-1">
+              {project.subtitle}
+            </p>
+          </div>
+
+          <button
+            onClick={onClose}
+            aria-label="Close modal"
+            className="p-2 text-slate-400 hover:text-white bg-slate-800/80 hover:bg-slate-700 rounded-lg transition-colors cursor-pointer"
+          >
+            <X className="w-5 h-5" />
+          </button>
+        </div>
+
+        <div className="py-6 space-y-6">
+          <div>
+            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">
+              Project Overview
+            </h4>
+            <p className="text-sm sm:text-base text-slate-300 leading-relaxed">
+              {project.longDescription || project.description}
+            </p>
+          </div>
+
+          {project.metrics && project.metrics.length > 0 && (
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+              {project.metrics.map((m, idx) => (
+                <div key={idx} className="p-3 bg-slate-950/60 border border-slate-800/80 rounded-xl">
+                  <div className="text-xs text-slate-400 font-medium">{m.label}</div>
+                  <div className="text-sm sm:text-base font-bold text-white mt-0.5">{m.value}</div>
+                </div>
+              ))}
+            </div>
+          )}
+
+          {project.architectureHighlights && project.architectureHighlights.length > 0 && (
+            <div className="p-4 rounded-xl bg-cyan-950/20 border border-cyan-800/40">
+              <div className="flex items-center gap-2 text-xs font-bold text-cyan-400 uppercase tracking-wider mb-3">
+                <Cpu className="w-4 h-4" />
+                <span>Architecture & Engineering Highlights</span>
+              </div>
+              <ul className="space-y-2.5">
+                {project.architectureHighlights.map((pt, idx) => (
+                  <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300 leading-normal">
+                    <CheckCircle2 className="w-4 h-4 text-cyan-400 shrink-0 mt-0.5" />
+                    <span>{pt}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          {project.tickets && project.tickets.length > 0 && (
+            <div>
+              <div className="flex items-center gap-2 text-xs font-bold text-slate-400 uppercase tracking-wider mb-3">
+                <Ticket className="w-4 h-4 text-sky-400" />
+                <span>Verified Tickets & PR Reference Deliverables</span>
+              </div>
+              <div className="space-y-2">
+                {project.tickets.map((t, idx) => (
+                  <div key={idx} className="p-3 bg-slate-950/60 border border-slate-800 rounded-lg flex items-start justify-between gap-3 text-xs">
+                    <div className="flex items-start gap-2.5">
+                      <span className="px-2 py-0.5 bg-slate-800 text-sky-300 font-mono font-bold rounded text-[11px] shrink-0">
+                        {t.code}
+                      </span>
+                      <span className="text-slate-200 font-medium">
+                        {t.title}
+                      </span>
+                    </div>
+                    {t.pr && (
+                      <span className="text-[11px] text-slate-400 font-mono shrink-0">
+                        {t.pr}
+                      </span>
+                    )}
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {project.keyContributions && project.keyContributions.length > 0 && (
+            <div>
+              <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+                Key Engineering Contributions
+              </h4>
+              <ul className="space-y-2">
+                {project.keyContributions.map((c, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-xs sm:text-sm text-slate-300">
+                    <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 mt-2 shrink-0" />
+                    <span>{c}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          )}
+
+          <div>
+            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2.5">
+              Technologies Used
+            </h4>
+            <div className="flex flex-wrap gap-2">
+              {project.techStack.map((tech, idx) => (
+                <span key={idx} className="px-2.5 py-1 text-xs font-medium rounded-lg bg-slate-800 text-slate-300 border border-slate-700/60">
+                  {tech}
+                </span>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="pt-6 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
+          <div className="flex items-center gap-3">
+            {project.liveUrl && (
+              <a
+                href={project.liveUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors"
+              >
+                <span>Visit Live Platform</span>
+                <ExternalLink className="w-3.5 h-3.5" />
+              </a>
+            )}
+
+            {project.githubUrl && (
+              <a
+                href={project.githubUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-1.5 px-4 py-2.5 text-xs font-semibold text-slate-200 bg-slate-800 hover:bg-slate-700 border border-slate-700 rounded-lg transition-colors"
+              >
+                <GithubIcon className="w-3.5 h-3.5" />
+                <span>Source Repository</span>
+              </a>
+            )}
+          </div>
+
+          <button
+            onClick={onClose}
+            className="px-4 py-2.5 text-xs font-semibold text-slate-400 hover:text-white transition-colors cursor-pointer"
+          >
+            Close
+          </button>
+        </div>
+
+      </div>
+    </div>
+  );
+};
