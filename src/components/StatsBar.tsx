@@ -19,13 +19,13 @@ export const StatsBar: React.FC = () => {
       icon: GitCommit,
       value: '350+ Commits',
       label: 'Verified Codebase Changes',
-      subtext: 'Features, refactors & critical fixes'
+      subtext: 'Custom modules, refactors & fixes'
     },
     {
       icon: Award,
-      value: '100% Offline / CWV',
-      label: 'Quality & Compliance Focus',
-      subtext: 'GDPR OneTrust & sub-second LCP'
+      value: 'High Performance',
+      label: 'Quality & CWV Focus',
+      subtext: 'Sub-second LCP & WCAG 2.1 AA'
     }
   ];
 

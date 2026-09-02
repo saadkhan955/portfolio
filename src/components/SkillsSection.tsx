@@ -2,17 +2,14 @@ import React from 'react';
 import { Layers, Code, Zap, Terminal, Cpu } from 'lucide-react';
 import { SKILL_GROUPS } from '../data/portfolioData';
 
-export const SkillsSection: React.FC = () => {
-  const getIcon = (name: string) => {
-    switch (name) {
-      case 'Layers': return Layers;
-      case 'Code': return Code;
-      case 'Zap': return Zap;
-      case 'Terminal': return Terminal;
-      default: return Cpu;
-    }
-  };
+const ICON_MAP: Record<string, React.FC<{ className?: string }>> = {
+  Layers,
+  Code,
+  Zap,
+  Terminal,
+};
 
+export const SkillsSection: React.FC = () => {
   return (
     <section id="skills" className="py-20 relative bg-slate-900/30 border-y border-slate-800/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -23,16 +20,16 @@ export const SkillsSection: React.FC = () => {
             <span>Proficiencies</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Technical Capabilities
+            Technical Capabilities & Skills
           </h2>
           <p className="text-sm sm:text-base text-slate-400 mt-2">
-            Full-stack mastery grounded in modern architecture, code quality, and strict WCAG accessibility.
+            Full-stack engineering grounded in modern architecture, code quality, and strict WCAG 2.1 AA accessibility.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {SKILL_GROUPS.map((group, idx) => {
-            const Icon = getIcon(group.iconName);
+            const Icon = ICON_MAP[group.iconName] || Cpu;
             return (
               <div key={idx} className="glass-panel rounded-2xl p-6 sm:p-8 border border-slate-800 bg-slate-900/70">
                 
