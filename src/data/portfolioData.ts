@@ -19,26 +19,27 @@ export const PROJECTS: Project[] = [
   {
     id: 'raf-benevolent-fund',
     title: 'RAF Benevolent Fund',
-    subtitle: 'Enterprise Charity Platform, Custom Modules & Core 11 Architecture',
+    subtitle: 'Enterprise Platform, Dynamic Social Preview Engine & Custom Modules',
     category: 'enterprise-drupal',
     clientOrOrg: 'ThisGainIndia / RAFBF',
     timeframe: '2026',
-    description: 'High-traffic fundraising platform featuring custom Drupal modules, automated reporting engines, dynamic donation workflows, and Drupal 11 core upgrades.',
-    longDescription: 'Architected backend custom modules and full-stack solutions for the UK’s leading RAF charity. Designed custom modules for dynamic social metadata tokens and automated entity usage auditing with XLSX export, upgraded core to Drupal 11 with PHP 8.3, and engineered custom Stripe payment workflows and performance overhauls.',
+    description: 'High-traffic fundraising platform featuring custom Drupal modules, dynamic Hero-based social share preview engine (OG/Twitter), entity auditing, and Drupal 11 core upgrades.',
+    longDescription: 'Architected backend custom modules and full-stack solutions for the UK’s leading RAF charity. Engineered a custom social share module that dynamically inspects page Hero paragraphs and media entities to generate contextual OpenGraph and Twitter preview cards with intelligent fallbacks. Designed an administrative entity usage reporting module with streaming XLSX export, upgraded core to Drupal 11 on PHP 8.3, and implemented Stripe donation workflows.',
     liveUrl: 'https://rafbf.org',
-    techStack: ['Drupal 11', 'PHP 8.3 OOP', 'Custom Modules', 'Stripe API', 'Twig', 'Tailwind CSS', 'DDEV', 'Composer', 'MySQL'],
+    techStack: ['Drupal 11', 'PHP 8.3 OOP', 'Custom Modules', 'Social Metatag Tokens', 'Stripe API', 'Twig', 'Tailwind CSS', 'DDEV', 'Composer'],
     metrics: [
       { label: 'Architecture', value: 'Drupal 11 / PHP 8.3' },
-      { label: 'Custom Modules', value: '2 Custom Modules Built' },
-      { label: 'Backend Services', value: 'XLSX Export & Meta Tokens' },
-      { label: 'Performance', value: 'Core Web Vitals Optimized' }
+      { label: 'Custom Module 1', value: 'Hero Social Preview (OG)' },
+      { label: 'Custom Module 2', value: 'Entity Usage XLSX Export' },
+      { label: 'Donation Engine', value: 'Stripe + Webform Sync' }
     ],
     featured: true,
     keyContributions: [
-      'Designed and developed 2 custom Drupal modules for dynamic OpenGraph metadata token processing and administrative entity usage auditing.',
-      'Architected Drupal 11 core upgrade on PHP 8.3, resolving service container deprecations and database driver compatibility.',
+      'Engineered a custom Social Share module providing dynamic Drupal tokens that extract Hero paragraph media to automatically generate rich OpenGraph (og:image) and Twitter cards with multi-level fallback logic.',
+      'Developed an administrative Entity Usage & Reporting module that scans paragraph/media references across all nodes and streams real-time XLSX spreadsheets.',
+      'Architected Drupal 11 core upgrade on PHP 8.3, resolving service container deprecations and custom database driver compatibility.',
       'Engineered backend Stripe payment workflows with automated donor metadata capture and self-healing Webform sync.',
-      'Implemented custom Views, backend preprocessors, and responsive Twig components.'
+      'Implemented responsive Hero components, YouTube iframe facade (saving 3MB initial payload), and OneTrust CLS layout containment.'
     ]
   },
   {
