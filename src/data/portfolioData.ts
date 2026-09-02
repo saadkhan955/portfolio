@@ -49,22 +49,22 @@ export const PROJECTS: Project[] = [
     category: 'enterprise-drupal',
     clientOrOrg: 'ThisGainIndia / Adder',
     timeframe: '2026',
-    description: 'Enterprise multi-region platform featuring custom Search API backend tokenizer fixes, module patching, custom routing endpoints, and paragraph design systems.',
-    longDescription: 'Maintained and resolved critical backend module and search indexing issues for a global technology manufacturer. Resolved Search API hyphen tokenization bugs to ensure exact product model searches, patched contrib modules, implemented AI discovery endpoints via custom routing, and developed reusable accordion paragraph systems.',
+    description: 'Enterprise multi-region platform featuring Search API backend tokenizer fixes, contrib module security patching, LLMS integration, and paragraph design systems.',
+    longDescription: 'Maintained and resolved critical backend module and search indexing issues for a global technology manufacturer. Resolved Search API hyphen tokenization bugs to ensure exact product model searches, patched and updated contrib modules, configured LLMS discovery integration (llms.txt), and developed reusable Auto FAQ accordion paragraph systems.',
     liveUrl: 'https://adder.com',
-    techStack: ['Drupal 10', 'PHP 8.3', 'Search API Backend', 'Custom Routing', 'Twig', 'SCSS', 'Acquia Cloud'],
+    techStack: ['Drupal 10', 'PHP 8.3', 'Search API Backend', 'Contrib Module Patches', 'Twig', 'SCSS', 'Acquia Cloud'],
     metrics: [
-      { label: 'Role', value: 'Full-Stack Drupal' },
+      { label: 'Role', value: 'Drupal Developer' },
       { label: 'Search Backend', value: 'Search API Tokenizer Fix' },
       { label: 'Module Health', value: 'Patched Contrib Modules' },
-      { label: 'Discovery API', value: 'llms.txt Routing Endpoint' }
+      { label: 'AI Discovery', value: 'LLMS Integration' }
     ],
     featured: true,
     keyContributions: [
-      'Diagnosed and fixed Search API tokenizer issues where hyphenated product model numbers were improperly stripped during indexing.',
-      'Built custom routing controller serving structured AI discovery endpoints (llms.txt).',
-      'Applied critical security patches and updates for Entity Browser and Diff modules.',
-      'Engineered reusable Auto FAQ accordion paragraph component supporting dynamic brand colour schemes.'
+      'Diagnosed and resolved Search API tokenizer issues where hyphenated product model numbers were improperly stripped during indexing.',
+      'Applied critical security patches and Composer updates for Entity Browser and Diff modules.',
+      'Configured and deployed LLMS module integration to expose structured site discovery (llms.txt) for AI crawlers.',
+      'Engineered reusable Auto FAQ accordion paragraph component supporting dynamic brand colour schemes and responsive video embeds.'
     ]
   },
   {
