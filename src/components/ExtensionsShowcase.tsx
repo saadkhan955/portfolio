@@ -266,9 +266,15 @@ export const ExtensionsShowcase: React.FC = () => {
           </div>
 
           <div className="flex flex-wrap items-center gap-2.5 shrink-0">
-            <span className="px-3 py-1.5 text-xs font-semibold text-slate-300 bg-slate-800/80 rounded-lg border border-slate-700">
-              Universal Binary (ARM64 & x86_64)
-            </span>
+            <a
+              href="https://github.com/saadkhan955/automatic-mouse-mover/releases/tag/v1.5.0"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 text-xs font-semibold text-slate-200 bg-slate-800/80 hover:bg-slate-700 hover:text-white rounded-lg border border-slate-700 hover:border-cyan-400/50 transition-colors group/release"
+            >
+              <span>Universal Binary (ARM64 & x86_64)</span>
+              <ArrowUpRight className="w-3.5 h-3.5 text-cyan-400 group-hover/release:translate-x-0.5 group-hover/release:-translate-y-0.5 transition-transform" />
+            </a>
             <a
               href="https://github.com/saadkhan955/automatic-mouse-mover"
               target="_blank"
