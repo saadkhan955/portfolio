@@ -2,12 +2,13 @@ import React from 'react';
 import { Layers, Code, Zap, Terminal, Cpu } from 'lucide-react';
 import { SKILL_GROUPS } from '../data/portfolioData';
 
-const ICON_MAP: Record<string, React.FC<{ className?: string }>> = {
-  Layers,
-  Code,
-  Zap,
-  Terminal,
-};
+function getSkillGroupIcon(iconName: string): React.FC<{ className?: string }> {
+  if (iconName === 'Layers') return Layers;
+  if (iconName === 'Code') return Code;
+  if (iconName === 'Zap') return Zap;
+  if (iconName === 'Terminal') return Terminal;
+  return Cpu;
+}
 
 export const SkillsSection: React.FC = () => {
   return (
@@ -29,7 +30,8 @@ export const SkillsSection: React.FC = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {SKILL_GROUPS.map((group, idx) => {
-            const Icon = ICON_MAP[group.iconName] || Cpu;
+            const Icon = getSkillGroupIcon(group.iconName);
+
             return (
               <div key={idx} className="glass-panel rounded-2xl p-6 sm:p-8 border border-slate-800 bg-slate-900/70">
                 
