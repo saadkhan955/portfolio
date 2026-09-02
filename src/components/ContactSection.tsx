@@ -50,7 +50,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
     setErrors({});
     setIsSubmitting(true);
 
-    // Prepare mailto fallback URL to saadkhan955@gmail.com
     const subject = encodeURIComponent(`[Portfolio Inquiry] ${formData.projectType} - from ${formData.name}`);
     const body = encodeURIComponent(
       `Hi Saad,\n\nName: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}\n\n---\nSent from saadkhan.dev portfolio`
@@ -59,7 +58,6 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
     setTimeout(() => {
       setIsSubmitting(false);
       setSubmitted(true);
-      // Trigger default email client pre-filled directly to Saad's email
       window.location.href = `mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`;
     }, 500);
   };
@@ -136,10 +134,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                           Your Name <span className="text-cyan-400">*</span>
                         </label>
                         <div className="relative">
-                          <User className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <User className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                           <input
                             id="contact-name"
+                            name="name"
                             type="text"
+                            autoComplete="name"
                             placeholder="e.g. Sarah Jenkins"
                             value={formData.name}
                             onChange={(e) => setFormData({ ...formData, name: e.target.value })}
@@ -162,10 +162,12 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                           Your Email <span className="text-cyan-400">*</span>
                         </label>
                         <div className="relative">
-                          <Mail className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <Mail className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                           <input
                             id="contact-email"
+                            name="email"
                             type="email"
+                            autoComplete="email"
                             placeholder="e.g. sarah@example.com"
                             value={formData.email}
                             onChange={(e) => setFormData({ ...formData, email: e.target.value })}
@@ -188,9 +190,11 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                           Area of Interest
                         </label>
                         <div className="relative">
-                          <Tag className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2" />
+                          <Tag className="w-4 h-4 text-slate-500 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
                           <select
                             id="contact-type"
+                            name="projectType"
+                            autoComplete="off"
                             value={formData.projectType}
                             onChange={(e) => setFormData({ ...formData, projectType: e.target.value })}
                             className="w-full pl-10 pr-8 py-2.5 text-xs bg-slate-900 border border-slate-800 rounded-xl text-white focus:outline-none focus:border-cyan-400 transition-colors appearance-none cursor-pointer"
@@ -211,6 +215,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                         </label>
                         <textarea
                           id="contact-message"
+                          name="message"
                           rows={4}
                           placeholder="Tell me a bit about your project, goals, or timeline..."
                           value={formData.message}
@@ -248,7 +253,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
 
               </div>
 
-              {/* Direct Info & Actions on Right (5 cols) - Equal height flex distribution */}
+              {/* Direct Info & Actions on Right (5 cols) */}
               <div className="lg:col-span-5 flex flex-col justify-between gap-4 h-full">
                 
                 {/* Email Copy Card */}

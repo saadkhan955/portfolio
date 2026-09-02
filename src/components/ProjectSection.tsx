@@ -53,9 +53,13 @@ export const ProjectSection: React.FC = () => {
           </div>
 
           <div className="relative w-full md:w-72">
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2" />
+            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
             <input
-              type="text"
+              id="project-search-input"
+              name="projectSearch"
+              type="search"
+              aria-label="Filter projects by technology, framework, or client"
+              autoComplete="off"
               placeholder="Filter by technology, framework, client..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
