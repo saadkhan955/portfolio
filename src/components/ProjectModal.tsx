@@ -49,7 +49,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         style={{ backgroundColor: '#0f172a' }}
         onClick={(e) => e.stopPropagation()}
       >
-        {/* Header */}
+        {/* Header with single, clear top-right Close button */}
         <div className="flex items-start justify-between gap-4 pb-5 border-b border-slate-800">
           <div>
             <div className="flex items-center gap-2.5 mb-1.5">
@@ -131,9 +131,9 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="pt-5 border-t border-slate-800 flex flex-wrap items-center justify-between gap-3">
-          <div className="flex items-center gap-3">
+        {/* Action Footer */}
+        {(project.liveUrl || project.githubUrl) && (
+          <div className="pt-5 border-t border-slate-800 flex items-center gap-3">
             {project.liveUrl && (
               <a
                 href={project.liveUrl}
@@ -158,14 +158,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
               </a>
             )}
           </div>
-
-          <button
-            onClick={onClose}
-            className="px-4 py-2 text-xs font-semibold text-slate-400 hover:text-white transition-colors cursor-pointer"
-          >
-            Close
-          </button>
-        </div>
+        )}
 
       </div>
     </div>,
