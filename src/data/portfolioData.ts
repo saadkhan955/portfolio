@@ -15,22 +15,23 @@ export const PERSONAL_INFO = {
 };
 
 export const PROJECTS: Project[] = [
+  // --- GAIN ENTERPRISE DRUPAL PROJECTS ---
   {
     id: 'raf-benevolent-fund',
     title: 'RAF Benevolent Fund',
     subtitle: 'Enterprise Charity Web Platform & Content Experience',
     category: 'enterprise-drupal',
-    clientOrOrg: 'Client Project via GAIN',
+    clientOrOrg: 'ThisGainIndia / RAFBF',
     timeframe: '2026',
     description: 'High-traffic enterprise web platform featuring responsive component-driven theming, dynamic content views, and Core Web Vitals optimizations.',
     longDescription: 'Collaborated on frontend development, theme styling, and user interface enhancements for a major UK charity platform. Built reusable Twig components, optimized asset loading for fast page speeds, and ensured accessible, cross-browser compatible layouts.',
     liveUrl: 'https://rafbf.org',
-    techStack: ['Drupal', 'PHP', 'Twig', 'Tailwind CSS', 'JavaScript', 'HTML5', 'DDEV', 'Composer'],
+    techStack: ['Drupal 11', 'PHP 8.3', 'Twig', 'Tailwind CSS', 'JavaScript', 'HTML5', 'DDEV', 'Composer'],
     metrics: [
       { label: 'Role', value: 'Frontend / Drupal' },
-      { label: 'Platform', value: 'Enterprise CMS' },
+      { label: 'Platform', value: 'Drupal 11' },
       { label: 'Focus', value: 'Performance & UI' },
-      { label: 'Standards', value: 'WCAG Accessibility' }
+      { label: 'Standards', value: 'WCAG 2.1 AA' }
     ],
     featured: true,
     keyContributions: [
@@ -45,12 +46,12 @@ export const PROJECTS: Project[] = [
     title: 'Adder Technology',
     subtitle: 'Global Technology Manufacturer Multi-Region Platform',
     category: 'enterprise-drupal',
-    clientOrOrg: 'Client Project via GAIN',
+    clientOrOrg: 'ThisGainIndia / Adder',
     timeframe: '2026',
     description: 'Global multi-region website featuring custom UI components, responsive accordion layouts, video embeds, and accessible design system styling.',
     longDescription: 'Implemented frontend features and UI component styling for a global technology manufacturer. Built customizable accordion layouts, streamlined responsive media presentations, and ensured seamless design consistency across regions.',
     liveUrl: 'https://adder.com',
-    techStack: ['Drupal', 'PHP', 'Twig', 'SCSS', 'JavaScript', 'HTML5', 'Acquia Cloud'],
+    techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'SCSS', 'JavaScript', 'HTML5', 'Acquia Cloud'],
     metrics: [
       { label: 'Role', value: 'Frontend Developer' },
       { label: 'Scope', value: 'Multi-Region' },
@@ -70,12 +71,12 @@ export const PROJECTS: Project[] = [
     title: 'Leonard Cheshire',
     subtitle: 'National Non-Profit Digital Presence',
     category: 'enterprise-drupal',
-    clientOrOrg: 'Client Project via GAIN',
+    clientOrOrg: 'ThisGainIndia / Leonard Cheshire',
     timeframe: '2026',
     description: 'Large-scale accessibility-first digital presence delivering structured content navigation, search discovery, and responsive page layouts.',
     longDescription: 'Maintained and developed user interface components and content structures for a leading non-profit organization. Focused on high-contrast accessibility standards, search page enhancements, and clean component theming.',
     liveUrl: 'https://leonardcheshire.org',
-    techStack: ['Drupal', 'PHP', 'Twig', 'Search API', 'CSS3', 'JavaScript', 'Acquia Cloud'],
+    techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'Search API', 'CSS3', 'JavaScript', 'Acquia Cloud'],
     metrics: [
       { label: 'Role', value: 'Drupal Developer' },
       { label: 'Focus', value: 'Accessibility' },
@@ -94,12 +95,12 @@ export const PROJECTS: Project[] = [
     title: 'Centre for Literacy in Primary Education',
     subtitle: 'Educational Publishing & Literacy Platform',
     category: 'enterprise-drupal',
-    clientOrOrg: 'Client Project via GAIN',
+    clientOrOrg: 'ThisGainIndia / CLPE',
     timeframe: '2026',
     description: 'Educational publishing hub providing digital learning resources, book listings, and streamlined user account journeys.',
     longDescription: 'Contributed to website maintenance, module integration, and user interface improvements. Focused on form validation, user registration journeys, and reliable template rendering.',
     liveUrl: 'https://clpe.org.uk',
-    techStack: ['Drupal', 'PHP', 'Twig', 'Commerce', 'HTML5', 'CSS3', 'Git'],
+    techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'Commerce', 'HTML5', 'CSS3', 'Git'],
     metrics: [
       { label: 'Role', value: 'Drupal Developer' },
       { label: 'Domain', value: 'Education' },
@@ -114,29 +115,177 @@ export const PROJECTS: Project[] = [
     ]
   },
   {
-    id: 'iws-aquasuite',
-    title: 'IWS AquaSuite & Web Platform',
-    subtitle: 'Commercial Platform & Business Suite',
-    category: 'react-fullstack',
-    clientOrOrg: 'Commercial Project',
+    id: 'kick-it-out',
+    title: 'Kick It Out',
+    subtitle: 'Campaign & Inclusivity Sports Portal',
+    category: 'enterprise-drupal',
+    clientOrOrg: 'ThisGainIndia / Kick It Out',
     timeframe: '2026',
-    description: 'Modern full-stack web platform built with TanStack Start, React 19, TypeScript, Tailwind CSS, and automated document print layouts.',
-    longDescription: 'Architected and engineered a comprehensive commercial web platform. Built with modern React 19 and TanStack Start, featuring interactive equipment showcases, optimized hero image loading, and dynamic PDF document layout capabilities.',
-    liveUrl: 'https://icarewatersolution.com',
-    githubUrl: 'https://github.com/saadkhan955',
-    techStack: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS', 'Vite', 'React-PDF'],
+    description: 'National equality and inclusion organization web platform featuring responsive campaign layouts, interactive cards, and high-impact media galleries.',
+    longDescription: 'Maintained frontend UI components and resolved cross-browser layout bugs on mobile Safari and modern rendering engines.',
+    liveUrl: 'https://kickitout.org',
+    techStack: ['Drupal', 'PHP', 'Twig', 'CSS3', 'JavaScript', 'Flexbox'],
     metrics: [
-      { label: 'React Version', value: 'React 19' },
-      { label: 'Performance', value: '98+ Lighthouse' },
-      { label: 'Styling', value: 'Tailwind CSS' },
-      { label: 'Build Tool', value: 'Vite' }
+      { label: 'Role', value: 'Frontend Developer' },
+      { label: 'Layouts', value: 'Campaign Feeds' },
+      { label: 'Compatibility', value: 'Cross-Browser' },
+      { label: 'Live Site', value: 'kickitout.org' }
+    ],
+    featured: false,
+    keyContributions: [
+      'Resolved cross-browser Flexbox rendering anomalies on mobile devices.',
+      'Refined campaign card layouts and responsive media embeds.'
+    ]
+  },
+
+  // --- PREVIOUS COMPANIES (BBG BITBASE, MSOL, SPECBEE, OSSPL) ---
+  {
+    id: 'takeda-multisite',
+    title: 'Takeda Multisite Platform',
+    subtitle: 'Healthcare Multisite Design System & Component Library',
+    category: 'enterprise-drupal',
+    clientOrOrg: 'BBG Bitbase India / Takeda',
+    timeframe: '2025 – 2026',
+    description: 'Large multisite Drupal platform for Takeda supporting multiple medical and brand portals with a shared design system and reusable component library.',
+    longDescription: 'Worked on a large multisite Drupal platform supporting international medical brands (takeda-gastroenterologie.de, dengue.de, passion-haemostaseologie.de). Engineered reusable Twig and SCSS components, interactive JavaScript features, form validation, and dynamic content views.',
+    liveUrl: 'https://takeda-gastroenterologie.de',
+    techStack: ['Drupal 10', 'Twig', 'SCSS', 'JavaScript', 'jQuery', 'Pattern Lab', 'DDEV', 'Composer'],
+    metrics: [
+      { label: 'Role', value: 'Frontend Engineer' },
+      { label: 'Scale', value: 'Multisite Platform' },
+      { label: 'Sites', value: '3+ Live Portals' },
+      { label: 'System', value: 'Shared Design System' }
     ],
     featured: true,
     keyContributions: [
-      'Built fast, SEO-optimized page routing using TanStack Start and modern React paradigms.',
-      'Implemented responsive product catalogs with detailed specification sheets.',
-      'Engineered dynamic print templates and clean document generation layouts.',
-      'Applied modern code quality tooling and type-safe component architectures.'
+      'Created and customized Twig templates, preprocessors, and SCSS for reusable UI components (hero cards, CTAs, event listings, badges, navigation).',
+      'Implemented responsive design for tablet, mobile, and desktop, resolving spacing, alignment, and breakpoint behavior.',
+      'Developed interactive JavaScript/jQuery features for modal handling, form state management, and AJAX filtering.',
+      'Ensured semantic HTML markup, accessibility compliance, and CSS code quality standards.'
+    ]
+  },
+  {
+    id: 'wasl-ae',
+    title: 'Wasl Dubai Real Estate',
+    subtitle: 'Enterprise Property & Community Management Portal',
+    category: 'enterprise-drupal',
+    clientOrOrg: 'MSOL Technologies / Wasl',
+    timeframe: '2024',
+    description: 'High-traffic Middle Eastern real estate portal with custom Webforms, localized UI layouts, and Gulp-automated SCSS pipelines.',
+    longDescription: 'Created custom webforms, template overrides, and responsive components based on Figma designs using Twig, HTML, SCSS, PHP, and JavaScript. Maintained asset pipelines with Gulp for production CSS/JS bundling.',
+    liveUrl: 'https://wasl.ae/en',
+    techStack: ['Drupal 9/10', 'PHP', 'Twig', 'SCSS', 'JavaScript', 'Gulp', 'Lando', 'Webform'],
+    metrics: [
+      { label: 'Role', value: 'Frontend Developer' },
+      { label: 'Client', value: 'Wasl Dubai' },
+      { label: 'Design Tool', value: 'Figma to Drupal' },
+      { label: 'Environment', value: 'Lando & Drush' }
+    ],
+    featured: true,
+    keyContributions: [
+      'Setup local Drupal instances with Lando, Composer, Drush, and enabled Twig debugging.',
+      'Built custom Webforms and multi-field property inquiry forms.',
+      'Configured Gulp build pipeline to compile SCSS into optimized CSS and minify JS.',
+      'Engineered responsive components precisely matching client Figma designs.'
+    ]
+  },
+  {
+    id: 'etf-com',
+    title: 'ETF.com',
+    subtitle: 'Financial Publishing & Fund Analytics Portal',
+    category: 'enterprise-drupal',
+    clientOrOrg: 'Specbee & QED42 / ETF.com',
+    timeframe: '2022 – 2023',
+    description: 'Leading financial exchange-traded fund data and publishing platform built with custom themes, Pattern Lab components, and Layout Builder.',
+    longDescription: 'Developed a custom Drupal theme from scratch based on Figma designs using HTML, CSS, Sass, JavaScript, template overrides, preprocessing functions, and Gulp. Used Pattern Lab to break down complex financial UI into atomic components.',
+    liveUrl: 'https://etf.com',
+    techStack: ['Drupal 9', 'Pattern Lab', 'Layout Builder', 'Sass', 'JavaScript', 'Gulp', 'Lando'],
+    metrics: [
+      { label: 'Role', value: 'Drupal Frontend' },
+      { label: 'Architecture', value: 'Pattern Lab' },
+      { label: 'Page Builder', value: 'Layout Builder' },
+      { label: 'Live Site', value: 'etf.com' }
+    ],
+    featured: false,
+    keyContributions: [
+      'Set up theme structures (.info, .libraries, .theme files and template folder hierarchy).',
+      'Employed Pattern Lab methodology to build modular atomic UI elements.',
+      'Configured Layout Builder allowing editorial teams to construct dynamic pages according to designs.'
+    ]
+  },
+  {
+    id: 'indian-government-portals',
+    title: 'Indian Government Portals',
+    subtitle: 'Accessible Government Websites (GIGW & W3C)',
+    category: 'enterprise-drupal',
+    clientOrOrg: 'Ornate Software Solution (OSSPL)',
+    timeframe: '2018 – 2022',
+    description: 'Accessible, responsive public sector web portals for Indian government departments compliant with W3C validation and GIGW guidelines.',
+    longDescription: 'Developed accessible, responsive websites for Indian government departments (maef.nic.in, py.gov.in, plantauthority.gov.in). Focused on W3C validation, GIGW guidelines, screen-reader accessibility, multi-language translation, and interactive JavaScript chart widgets.',
+    liveUrl: 'https://py.gov.in',
+    techStack: ['HTML5', 'CSS3', 'JavaScript', 'W3C Accessibility', 'GIGW', 'PHP', 'MySQL'],
+    metrics: [
+      { label: 'Role', value: 'Web Developer' },
+      { label: 'Standard', value: 'GIGW & WCAG' },
+      { label: 'Accessibility', value: 'Screen Reader Ready' },
+      { label: 'Portals', value: 'maef, py.gov, plant' }
+    ],
+    featured: false,
+    keyContributions: [
+      'Enforced strict W3C validation, semantic HTML5, and screen-reader accessibility.',
+      'Implemented multi-language translation switchers and RTL/LTR text layouts.',
+      'Built interactive JavaScript chart widgets for public data display.'
+    ]
+  },
+
+  // --- REACTJS PROJECTS (FROM RESUME & MONOREPOS) ---
+  {
+    id: 'limatech-platform',
+    title: 'Limatech Solutions',
+    subtitle: 'Enterprise Business & Digital Platform',
+    category: 'react-fullstack',
+    clientOrOrg: 'Limatech Solutions',
+    timeframe: '2025',
+    description: 'Scalable enterprise frontend platform built using React, TypeScript, Vite, Zustand, DOMPurify, and Framer Motion.',
+    longDescription: 'Engineered a scalable enterprise frontend platform for Limatech Solutions. Implemented type-safe state management with Zustand, sanitization via DOMPurify, fluid responsive animations with Framer Motion, and lightning-fast Vite bundling.',
+    liveUrl: 'https://limatechsolution.in',
+    techStack: ['React', 'TypeScript', 'Vite', 'Zustand', 'Tailwind CSS', 'Framer Motion', 'DOMPurify'],
+    metrics: [
+      { label: 'Role', value: 'Frontend Engineer' },
+      { label: 'Stack', value: 'React + TypeScript' },
+      { label: 'State', value: 'Zustand' },
+      { label: 'Live App', value: 'limatechsolution.in' }
+    ],
+    featured: true,
+    keyContributions: [
+      'Developed a scalable component architecture using React, TypeScript, and Tailwind CSS.',
+      'Implemented centralized client state management using lightweight Zustand stores.',
+      'Sanitized dynamic rich content with DOMPurify for security compliance.',
+      'Added smooth, accessible micro-interactions with Framer Motion.'
+    ]
+  },
+  {
+    id: 'gns-systems',
+    title: 'GNS Business Platform',
+    subtitle: 'Corporate Digital Presence & Lead Platform',
+    category: 'react-fullstack',
+    clientOrOrg: 'GNS Systems',
+    timeframe: '2025',
+    description: 'Corporate digital presence platform focused on technical service showcases, brand communication, and interactive lead capture.',
+    longDescription: 'Engineered a modern corporate digital presence platform delivering interactive service showcases, brand storytelling, and high-conversion contact journeys built on modern React tooling.',
+    liveUrl: 'https://gns.systems',
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Responsive Design'],
+    metrics: [
+      { label: 'Role', value: 'Frontend Developer' },
+      { label: 'Type', value: 'Corporate Platform' },
+      { label: 'Focus', value: 'Lead Generation' },
+      { label: 'Live App', value: 'gns.systems' }
+    ],
+    featured: false,
+    keyContributions: [
+      'Built responsive service showcase layouts and interactive capability cards.',
+      'Integrated accessible contact and consultation lead forms.',
+      'Optimized asset loading and mobile layout performance.'
     ]
   },
   {
@@ -189,6 +338,34 @@ export const PROJECTS: Project[] = [
       'Maintained type safety and consistent component styling across all views.'
     ]
   },
+  {
+    id: 'iws-aquasuite',
+    title: 'IWS AquaSuite & Web Platform',
+    subtitle: 'Commercial Platform & Business Suite',
+    category: 'react-fullstack',
+    clientOrOrg: 'Commercial Project',
+    timeframe: '2026',
+    description: 'Modern full-stack web platform built with TanStack Start, React 19, TypeScript, Tailwind CSS, and automated document print layouts.',
+    longDescription: 'Architected and engineered a comprehensive commercial web platform. Built with modern React 19 and TanStack Start, featuring interactive equipment showcases, optimized hero image loading, and dynamic PDF document layout capabilities.',
+    liveUrl: 'https://icarewatersolution.com',
+    githubUrl: 'https://github.com/saadkhan955',
+    techStack: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS', 'Vite', 'React-PDF'],
+    metrics: [
+      { label: 'React Version', value: 'React 19' },
+      { label: 'Performance', value: '98+ Lighthouse' },
+      { label: 'Styling', value: 'Tailwind CSS' },
+      { label: 'Build Tool', value: 'Vite' }
+    ],
+    featured: true,
+    keyContributions: [
+      'Built fast, SEO-optimized page routing using TanStack Start and modern React paradigms.',
+      'Implemented responsive product catalogs with detailed specification sheets.',
+      'Engineered dynamic print templates and clean document generation layouts.',
+      'Applied modern code quality tooling and type-safe component architectures.'
+    ]
+  },
+
+  // --- CHROME EXTENSIONS & TOOLS ---
   {
     id: 'youtube-tabs-to-playlist',
     title: 'TabFlow for YouTube',
