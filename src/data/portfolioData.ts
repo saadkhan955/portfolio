@@ -2,116 +2,116 @@ import { Project, Experience, SkillGroup } from '../types';
 
 export const PERSONAL_INFO = {
   name: 'Saad Khan',
-  role: 'Frontend Developer & Enterprise Drupal Specialist',
+  role: 'Full-Stack Drupal Developer & Modern Web Engineer',
   status: 'Drupal Developer at ThisGainIndia (GAIN)',
   location: 'Mumbai, India',
   email: 'saadkhan955@gmail.com',
   github: 'https://github.com/saadkhan955',
-  bio: 'Frontend Developer with 5+ years of experience building responsive, scalable, and user-centric web applications across Drupal and ReactJS ecosystems. Specialized in Drupal theming, component-driven design systems, Core Web Vitals optimization, and modern frontend engineering.',
+  bio: 'Full-Stack Drupal Developer with 5+ years of experience engineering scalable CMS architectures, custom PHP 8.3 modules, Search API pipelines, and high-performance React/TypeScript applications. Proven track record in Drupal 10/11 core migrations, custom backend services, payment engines, and Core Web Vitals optimization.',
   experienceYears: '5+',
   enterpriseProjectsCount: '15+',
   productionCommits: '350+',
-  performanceFocus: 'Performance & Accessibility Focused',
+  performanceFocus: 'Backend Architecture & High Performance',
 };
 
 export const PROJECTS: Project[] = [
-  // --- GAIN ENTERPRISE DRUPAL PROJECTS ---
+  // --- GAIN ENTERPRISE DRUPAL & BACKEND PROJECTS ---
   {
     id: 'raf-benevolent-fund',
     title: 'RAF Benevolent Fund',
-    subtitle: 'Enterprise Charity Web Platform & Content Experience',
+    subtitle: 'Enterprise Charity Platform, Custom Modules & Core 11 Architecture',
     category: 'enterprise-drupal',
     clientOrOrg: 'ThisGainIndia / RAFBF',
     timeframe: '2026',
-    description: 'High-traffic enterprise web platform featuring responsive component-driven theming, dynamic content views, and Core Web Vitals optimizations.',
-    longDescription: 'Collaborated on frontend development, theme styling, and user interface enhancements for a major UK charity platform. Built reusable Twig components, optimized asset loading for fast page speeds, and ensured accessible, cross-browser compatible layouts.',
+    description: 'High-traffic fundraising platform featuring custom Drupal modules, automated reporting engines, dynamic donation workflows, and Drupal 11 core upgrades.',
+    longDescription: 'Architected backend custom modules and full-stack solutions for the UK’s leading RAF charity. Designed custom modules for dynamic social metadata tokens and automated entity usage auditing with XLSX export, upgraded core to Drupal 11 with PHP 8.3, and engineered custom Stripe payment workflows and performance overhauls.',
     liveUrl: 'https://rafbf.org',
-    techStack: ['Drupal 11', 'PHP 8.3', 'Twig', 'Tailwind CSS', 'JavaScript', 'HTML5', 'DDEV', 'Composer'],
+    techStack: ['Drupal 11', 'PHP 8.3 OOP', 'Custom Modules', 'Stripe API', 'Twig', 'Tailwind CSS', 'DDEV', 'Composer', 'MySQL'],
     metrics: [
-      { label: 'Role', value: 'Frontend / Drupal' },
-      { label: 'Platform', value: 'Drupal 11' },
-      { label: 'Focus', value: 'Performance & UI' },
-      { label: 'Standards', value: 'WCAG 2.1 AA' }
+      { label: 'Architecture', value: 'Drupal 11 / PHP 8.3' },
+      { label: 'Custom Modules', value: '2 Custom Modules Built' },
+      { label: 'Backend Services', value: 'XLSX Export & Meta Tokens' },
+      { label: 'Performance', value: 'Core Web Vitals Optimized' }
     ],
     featured: true,
     keyContributions: [
-      'Developed responsive hero and card components using custom Twig templates and modern CSS.',
-      'Created and customized Drupal Views to fetch and display dynamic content sections and media listings.',
-      'Implemented frontend performance improvements to optimize Core Web Vitals and user experience.',
-      'Ensured cross-browser compatibility and mobile responsiveness across devices.'
+      'Designed and developed 2 custom Drupal modules for dynamic OpenGraph metadata token processing and administrative entity usage auditing.',
+      'Architected Drupal 11 core upgrade on PHP 8.3, resolving service container deprecations and database driver compatibility.',
+      'Engineered backend Stripe payment workflows with automated donor metadata capture and self-healing Webform sync.',
+      'Implemented custom Views, backend preprocessors, and responsive Twig components.'
     ]
   },
   {
     id: 'adder-technology',
     title: 'Adder Technology',
-    subtitle: 'Global Technology Manufacturer Multi-Region Platform',
+    subtitle: 'Global Technology Platform & Backend Search Optimization',
     category: 'enterprise-drupal',
     clientOrOrg: 'ThisGainIndia / Adder',
     timeframe: '2026',
-    description: 'Global multi-region website featuring custom UI components, responsive accordion layouts, video embeds, and accessible design system styling.',
-    longDescription: 'Implemented frontend features and UI component styling for a global technology manufacturer. Built customizable accordion layouts, streamlined responsive media presentations, and ensured seamless design consistency across regions.',
+    description: 'Enterprise multi-region platform featuring custom Search API backend tokenizer fixes, module patching, custom routing endpoints, and paragraph design systems.',
+    longDescription: 'Maintained and resolved critical backend module and search indexing issues for a global technology manufacturer. Resolved Search API hyphen tokenization bugs to ensure exact product model searches, patched contrib modules, implemented AI discovery endpoints via custom routing, and developed reusable accordion paragraph systems.',
     liveUrl: 'https://adder.com',
-    techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'SCSS', 'JavaScript', 'HTML5', 'Acquia Cloud'],
+    techStack: ['Drupal 10', 'PHP 8.3', 'Search API Backend', 'Custom Routing', 'Twig', 'SCSS', 'Acquia Cloud'],
     metrics: [
-      { label: 'Role', value: 'Frontend Developer' },
-      { label: 'Scope', value: 'Multi-Region' },
-      { label: 'UI Focus', value: 'Design System' },
-      { label: 'Components', value: 'Interactive UI' }
+      { label: 'Role', value: 'Full-Stack Drupal' },
+      { label: 'Search Backend', value: 'Search API Tokenizer Fix' },
+      { label: 'Module Health', value: 'Patched Contrib Modules' },
+      { label: 'Discovery API', value: 'llms.txt Routing Endpoint' }
     ],
     featured: true,
     keyContributions: [
-      'Built reusable accordion and content paragraph components supporting flexible colour variations.',
-      'Enhanced responsive video presentation and interactive media elements across product pages.',
-      'Refactored styles for maintainability and alignment with brand design guidelines.',
-      'Maintained theme styling adherence to agreed development processes and timelines.'
+      'Diagnosed and fixed Search API tokenizer issues where hyphenated product model numbers were improperly stripped during indexing.',
+      'Built custom routing controller serving structured AI discovery endpoints (llms.txt).',
+      'Applied critical security patches and updates for Entity Browser and Diff modules.',
+      'Engineered reusable Auto FAQ accordion paragraph component supporting dynamic brand colour schemes.'
     ]
   },
   {
     id: 'leonard-cheshire',
     title: 'Leonard Cheshire',
-    subtitle: 'National Non-Profit Digital Presence',
+    subtitle: 'Search Engine Backend Migration & Privacy Architecture',
     category: 'enterprise-drupal',
     clientOrOrg: 'ThisGainIndia / Leonard Cheshire',
     timeframe: '2026',
-    description: 'Large-scale accessibility-first digital presence delivering structured content navigation, search discovery, and responsive page layouts.',
-    longDescription: 'Maintained and developed user interface components and content structures for a leading non-profit organization. Focused on high-contrast accessibility standards, search page enhancements, and clean component theming.',
+    description: 'Large-scale non-profit platform maintenance including backend search engine migration from Solr to Database Search, session privacy, and database routine cleanup.',
+    longDescription: 'Led backend and architectural improvements for Leonard Cheshire. Executed a complete search pipeline migration from Apache Solr to native Search API Database (search_api_db) with custom indexed view modes, refactored session handling for privacy compliance, and sanitized legacy database triggers.',
     liveUrl: 'https://leonardcheshire.org',
-    techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'Search API', 'CSS3', 'JavaScript', 'Acquia Cloud'],
+    techStack: ['Drupal 10', 'PHP 8.3', 'Search API DB', 'CleanTalk Privacy', 'Acquia Cloud', 'MySQL', 'Twig'],
     metrics: [
-      { label: 'Role', value: 'Drupal Developer' },
-      { label: 'Focus', value: 'Accessibility' },
-      { label: 'Theming', value: 'Component-Driven' },
-      { label: 'Navigation', value: 'Dynamic Menus' }
+      { label: 'Search Migration', value: 'Solr -> Search API DB' },
+      { label: 'Session Privacy', value: 'Cookie-Free Handling' },
+      { label: 'Cloud Database', value: 'Cleaned Trigger Routines' },
+      { label: 'Error Tracking', value: 'Sentry Production' }
     ],
     featured: true,
     keyContributions: [
-      'Maintained responsive themes and layout templates ensuring accessibility compliance.',
-      'Customized search results pages and content listing views.',
-      'Integrated Webforms and custom layout blocks for campaign initiatives.'
+      'Migrated search indexing pipeline from Apache Solr to search_api_db with custom rendered item view modes, eliminating external infrastructure overhead while preserving search relevance.',
+      'Refactored CleanTalk anti-spam integration to enforce cookie-free session privacy.',
+      'Sanitized Acquia Cloud database synchronization by clearing orphan MySQL trigger routines.'
     ]
   },
   {
     id: 'clpe',
     title: 'Centre for Literacy in Primary Education',
-    subtitle: 'Educational Publishing & Literacy Platform',
+    subtitle: 'Commerce Backend Dependency Management & Schema Updates',
     category: 'enterprise-drupal',
     clientOrOrg: 'ThisGainIndia / CLPE',
     timeframe: '2026',
-    description: 'Educational publishing hub providing digital learning resources, book listings, and streamlined user account journeys.',
-    longDescription: 'Contributed to website maintenance, module integration, and user interface improvements. Focused on form validation, user registration journeys, and reliable template rendering.',
+    description: 'Educational publishing and commerce platform security maintenance, Drupal Core 10.6.13 updates, and database schema repairs.',
+    longDescription: 'Resolved complex Composer dependency trees and security updates across Drupal Core 10.6.13, Commerce 3.3.6, and Guzzle HTTP client. Executed database schema update hooks repairing commerce_order entity definitions and standardized GDPR consent workflows.',
     liveUrl: 'https://clpe.org.uk',
-    techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'Commerce', 'HTML5', 'CSS3', 'Git'],
+    techStack: ['Drupal 10', 'Drupal Commerce 3', 'PHP 8.3', 'Guzzle', 'Entity API', 'Composer', 'Git'],
     metrics: [
-      { label: 'Role', value: 'Drupal Developer' },
-      { label: 'Domain', value: 'Education' },
-      { label: 'Modules', value: 'Custom & Contrib' },
-      { label: 'Journeys', value: 'User Experience' }
+      { label: 'Core / Security', value: 'Drupal 10.6.13' },
+      { label: 'Commerce Engine', value: 'Commerce 3.3.6' },
+      { label: 'Schema Fixes', value: 'commerce_order Update Hook' },
+      { label: 'Dependencies', value: 'Zero-Vulnerability Build' }
     ],
     featured: false,
     keyContributions: [
-      'Integrated and configured Drupal modules and custom Webforms.',
-      'Customized user registration and account interaction flows.',
-      'Ensured reliable template rendering and clean frontend code standards.'
+      'Resolved complex Composer dependency conflicts across core-recommended, Guzzle, and PSR packages.',
+      'Executed custom schema update hooks to repair mismatched commerce_order entity definitions in the database.',
+      'Standardized GDPR registration and checkout consent capture workflows.'
     ]
   },
   {
@@ -122,11 +122,11 @@ export const PROJECTS: Project[] = [
     clientOrOrg: 'ThisGainIndia / Kick It Out',
     timeframe: '2026',
     description: 'National equality and inclusion organization web platform featuring responsive campaign layouts, interactive cards, and high-impact media galleries.',
-    longDescription: 'Maintained frontend UI components and resolved cross-browser layout bugs on mobile Safari and modern rendering engines.',
+    longDescription: 'Maintained UI components and resolved cross-browser layout bugs on mobile Safari and modern rendering engines.',
     liveUrl: 'https://kickitout.org',
     techStack: ['Drupal', 'PHP', 'Twig', 'CSS3', 'JavaScript', 'Flexbox'],
     metrics: [
-      { label: 'Role', value: 'Frontend Developer' },
+      { label: 'Role', value: 'Drupal Developer' },
       { label: 'Layouts', value: 'Campaign Feeds' },
       { label: 'Compatibility', value: 'Cross-Browser' },
       { label: 'Live Site', value: 'kickitout.org' }
@@ -149,9 +149,9 @@ export const PROJECTS: Project[] = [
     description: 'Large multisite Drupal platform for Takeda supporting multiple medical and brand portals with a shared design system and reusable component library.',
     longDescription: 'Worked on a large multisite Drupal platform supporting international medical brands (takeda-gastroenterologie.de, dengue.de, passion-haemostaseologie.de). Engineered reusable Twig and SCSS components, interactive JavaScript features, form validation, and dynamic content views.',
     liveUrl: 'https://takeda-gastroenterologie.de',
-    techStack: ['Drupal 10', 'Twig', 'SCSS', 'JavaScript', 'jQuery', 'Pattern Lab', 'DDEV', 'Composer'],
+    techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'SCSS', 'JavaScript', 'jQuery', 'Pattern Lab', 'DDEV'],
     metrics: [
-      { label: 'Role', value: 'Frontend Engineer' },
+      { label: 'Role', value: 'Drupal Engineer' },
       { label: 'Scale', value: 'Multisite Platform' },
       { label: 'Sites', value: '3+ Live Portals' },
       { label: 'System', value: 'Shared Design System' }
@@ -176,7 +176,7 @@ export const PROJECTS: Project[] = [
     liveUrl: 'https://wasl.ae/en',
     techStack: ['Drupal 9/10', 'PHP', 'Twig', 'SCSS', 'JavaScript', 'Gulp', 'Lando', 'Webform'],
     metrics: [
-      { label: 'Role', value: 'Frontend Developer' },
+      { label: 'Role', value: 'Drupal Developer' },
       { label: 'Client', value: 'Wasl Dubai' },
       { label: 'Design Tool', value: 'Figma to Drupal' },
       { label: 'Environment', value: 'Lando & Drush' }
@@ -238,7 +238,7 @@ export const PROJECTS: Project[] = [
     ]
   },
 
-  // --- REACTJS PROJECTS (FROM RESUME & MONOREPOS) ---
+  // --- REACTJS & FULL-STACK PROJECTS ---
   {
     id: 'limatech-platform',
     title: 'Limatech Solutions',
@@ -347,7 +347,7 @@ export const PROJECTS: Project[] = [
     timeframe: '2026',
     description: 'Modern full-stack web platform built with TanStack Start, React 19, TypeScript, Tailwind CSS, and automated document print layouts.',
     longDescription: 'Architected and engineered a comprehensive commercial web platform. Built with modern React 19 and TanStack Start, featuring interactive equipment showcases, optimized hero image loading, and dynamic PDF document layout capabilities.',
-    liveUrl: 'https://icarewatersolutions.com',
+    liveUrl: 'https://icarewatersolutions.com/',
     githubUrl: 'https://github.com/saadkhan955',
     techStack: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS', 'Vite', 'React-PDF'],
     metrics: [
@@ -441,20 +441,20 @@ export const PROJECTS: Project[] = [
 export const EXPERIENCES: Experience[] = [
   {
     company: 'ThisGainIndia (GAIN) Pvt. Ltd.',
-    role: 'Drupal Developer',
+    role: 'Drupal Developer & Backend Specialist',
     location: 'Remote',
     period: 'April 2026 – Present',
     current: true,
-    description: 'Gather and analyse requirements, produce technical designs, and build web applications using Drupal CMS.',
+    description: 'Lead Drupal engineering, custom PHP 8.3 module development, Search API optimization, and Drupal 11 core upgrades across high-profile enterprise client portfolios.',
     projectsSummary: 'Enterprise client projects including rafbf.org, adder.com, leonardcheshire.org, clpe.org.uk, kickitout.org.',
     deliverables: [
-      'Creating and customizing Views to fetch and display dynamic content sections, blocks, and media listings.',
-      'Integrating and configuring custom Drupal modules, Webforms, and third-party services.',
-      'Performing routine Drupal core and module security updates, maintenance, and bug fixes.',
-      'Maintaining website adherence to development processes, agreed timelines, and coding standards.',
-      'Testing and debugging functionality to ensure reliable, error-free pages.'
+      'Designed 2 custom Drupal modules for dynamic social metadata tokens and automated entity usage reporting with XLSX streaming export.',
+      'Architected Drupal 11 core upgrades with PHP 8.3 OOP architecture and dependency injection services.',
+      'Diagnosed and resolved backend Search API tokenizer and indexing bugs for global product catalogs.',
+      'Migrated enterprise search pipelines from Apache Solr to native Search API Database (search_api_db).',
+      'Engineered backend Stripe payment integrations with self-healing Webform submission reconciliation.'
     ],
-    technologies: ['Drupal 10/11', 'PHP 8.3', 'Twig', 'Tailwind CSS', 'JavaScript', 'Webform', 'DDEV', 'Composer']
+    technologies: ['Drupal 10/11', 'PHP 8.3 OOP', 'Custom Modules', 'Search API', 'Stripe', 'Twig', 'Tailwind CSS', 'DDEV', 'Acquia Cloud']
   },
   {
     company: 'BBG Bitbase India',
@@ -517,17 +517,17 @@ export const EXPERIENCES: Experience[] = [
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
-    name: 'Drupal & CMS Architecture',
-    description: 'Enterprise multisite systems, custom theming, and layout builders',
+    name: 'Drupal & Backend Architecture',
+    description: 'Custom modules, PHP 8.3 OOP, Search API, and core migrations',
     iconName: 'Layers',
     skills: [
-      { name: 'Drupal (7/8/10/11)', level: 'Expert', highlight: true },
-      { name: 'Twig Templating & SDC', level: 'Expert', highlight: true },
-      { name: 'PHP 8.3 & Preprocessors', level: 'Expert', highlight: true },
-      { name: 'Drush & Configuration Management', level: 'Expert', highlight: true },
-      { name: 'Views & Media Configurations', level: 'Expert', highlight: true },
-      { name: 'Webforms & Custom Blocks', level: 'Expert', highlight: true },
-      { name: 'Layout Builder & Pattern Lab', level: 'Advanced' },
+      { name: 'Drupal 10 & 11 Core', level: 'Expert', highlight: true },
+      { name: 'Custom Module Development', level: 'Expert', highlight: true },
+      { name: 'PHP 8.3 & Dependency Injection', level: 'Expert', highlight: true },
+      { name: 'Search API (DB & Solr)', level: 'Expert', highlight: true },
+      { name: 'Drush & Config Management', level: 'Expert', highlight: true },
+      { name: 'Database Schemas & Update Hooks', level: 'Expert', highlight: true },
+      { name: 'Stripe & Third-Party APIs', level: 'Expert', highlight: true },
       { name: 'Sanity Headless CMS', level: 'Advanced' }
     ]
   },
@@ -536,78 +536,78 @@ export const SKILL_GROUPS: SkillGroup[] = [
     description: 'Component-driven user interfaces, SPAs, and responsive design',
     iconName: 'Code',
     skills: [
+      { name: 'Twig Templating & SDC', level: 'Expert', highlight: true },
       { name: 'ReactJS & TypeScript', level: 'Expert', highlight: true },
-      { name: 'HTML5 & Semantic Markup', level: 'Expert', highlight: true },
-      { name: 'CSS3 / SCSS / PostCSS', level: 'Expert', highlight: true },
-      { name: 'Tailwind CSS', level: 'Expert', highlight: true },
-      { name: 'JavaScript (ES6+) & jQuery', level: 'Expert', highlight: true },
+      { name: 'Tailwind CSS & SCSS', level: 'Expert', highlight: true },
       { name: 'TanStack Start & Vite', level: 'Advanced', highlight: true },
-      { name: 'Responsive Mobile-First Design', level: 'Expert', highlight: true },
-      { name: 'Canvas API & SVG Manipulation', level: 'Advanced' }
+      { name: 'JavaScript (ES6+) & jQuery', level: 'Expert', highlight: true },
+      { name: 'Pattern Lab & Layout Builder', level: 'Advanced', highlight: true },
+      { name: 'Canvas API & SVG Manipulation', level: 'Advanced' },
+      { name: 'Responsive Mobile-First UI', level: 'Expert', highlight: true }
     ]
   },
   {
-    name: 'Performance & Quality',
-    description: 'Core Web Vitals, accessibility, and cross-browser reliability',
+    name: 'Performance & Compliance',
+    description: 'Core Web Vitals, accessibility, and GDPR data privacy',
     iconName: 'Zap',
     skills: [
-      { name: 'Core Web Vitals Optimization', level: 'Expert', highlight: true },
+      { name: 'Core Web Vitals (LCP, CLS, INP)', level: 'Expert', highlight: true },
+      { name: 'OneTrust & CookiePro GDPR', level: 'Expert', highlight: true },
+      { name: 'Google Consent Mode v2', level: 'Advanced', highlight: true },
       { name: 'WCAG 2.1 AA Accessibility', level: 'Expert', highlight: true },
-      { name: 'Cross-Browser Compatibility', level: 'Expert', highlight: true },
-      { name: 'Image Optimization & WebP', level: 'Expert', highlight: true },
       { name: 'Code Standards (PHPCS / ESLint)', level: 'Expert', highlight: true }
     ]
   },
   {
-    name: 'Tools & Workflow',
-    description: 'Local development environments, build systems, and Agile collaboration',
+    name: 'Tools, DevOps & Cloud',
+    description: 'Containerized environments, cloud hosting, and CI/CD',
     iconName: 'Terminal',
     skills: [
-      { name: 'Git & Version Control', level: 'Expert', highlight: true },
       { name: 'DDEV & Lando Containers', level: 'Expert', highlight: true },
       { name: 'Composer & NPM / Vite', level: 'Expert', highlight: true },
+      { name: 'Acquia Cloud & Pantheon Hosting', level: 'Advanced', highlight: true },
       { name: 'Cloudflare Pages & Workers', level: 'Advanced', highlight: true },
-      { name: 'Chrome Extension Development (MV3)', level: 'Advanced', highlight: true },
-      { name: 'Jira & ClickUp Sprint Management', level: 'Expert', highlight: true }
+      { name: 'Chrome Extensions (MV3)', level: 'Advanced', highlight: true },
+      { name: 'Git & Agile Sprint Workflows', level: 'Expert', highlight: true }
     ]
   }
 ];
 
 export const ARCHITECTURE_CASE_STUDIES = [
   {
-    id: 'component-theming',
-    title: 'Component-Driven Theming & Design Systems',
-    category: 'Frontend Architecture',
-    summary: 'Standardizing UI building blocks across enterprise platforms using reusable Twig templates, modern SCSS/Tailwind, and component-first architectures.',
-    impact: 'Accelerates feature delivery, maintains brand consistency across multi-page portals, and minimizes styling regressions.',
+    id: 'custom-modules-services',
+    title: 'Custom Drupal Modules & Backend Services',
+    category: 'Backend Architecture',
+    summary: 'Designing object-oriented custom modules, Symfony services, and dependency injection patterns in Drupal 10/11.',
+    impact: 'Enables custom business logic, secure API integrations, and streamlined administrative reporting.',
     points: [
-      'Encapsulates markup, styles, and behaviors into modular, reusable UI components.',
-      'Implements flexible layout variations (hero sections, cards, modals, navigation) from Figma specifications.',
-      'Ensures semantic HTML5 structure with strict accessibility compliance.'
+      'Encapsulates business logic in testable, injectable PHP 8.3 services registered in services.yml.',
+      'Builds custom token processing, controller endpoints, and streaming XLSX export pipelines.',
+      'Executes database schema update hooks to maintain entity data integrity across migrations.'
+    ]
+  },
+  {
+    id: 'search-api-optimization',
+    title: 'Search API Pipelines & Tokenizer Tuning',
+    category: 'Search & Indexing',
+    summary: 'Configuring Search API backends (Database & Solr) with customized tokenizers and indexed view modes.',
+    impact: 'Resolves search drop-offs on technical model numbers and reduces server query latencies.',
+    points: [
+      'Customizes fulltext search tokenizers to preserve hyphens and alphanumeric model codes.',
+      'Optimizes rendered item view modes for indexing only essential search facets.',
+      'Delivers reliable, high-relevance search across large multi-category product portfolios.'
     ]
   },
   {
     id: 'cwv-performance',
-    title: 'Core Web Vitals & Asset Optimization',
-    category: 'Performance Engineering',
-    summary: 'Optimizing high-traffic enterprise portals for fast loading times, responsive interactions, and zero visual layout shifts.',
-    impact: 'Substantially boosts Lighthouse performance scores and improves search engine ranking signals.',
+    title: 'Core Web Vitals & Component Theming',
+    category: 'Performance & Frontend',
+    summary: 'Pairing component-driven Twig/Tailwind theming with Core Web Vitals optimizations for sub-second speeds.',
+    impact: 'Achieves CLS < 0.02, accelerates LCP, and delivers seamless responsive user experiences.',
     points: [
-      'Implements modern image loading strategies (WebP formats, responsive picture elements, native lazy-loading).',
-      'Minimizes parser-blocking JavaScript payloads and defers non-critical assets.',
-      'Neutralizes Cumulative Layout Shift (CLS) by reserving dimensional aspect ratios for dynamic embeds.'
-    ]
-  },
-  {
-    id: 'accessible-forms',
-    title: 'Responsive & Accessible Form Journeys',
-    category: 'User Experience',
-    summary: 'Designing intuitive, accessible form interfaces, interactive filters, and client-side validation workflows.',
-    impact: 'Enhances form conversion rates and guarantees full keyboard navigation and screen-reader usability.',
-    points: [
-      'Builds multi-step Webforms with clear error feedback and instant validation.',
-      'Ensures full WCAG 2.1 AA keyboard navigation, high color contrast, and proper ARIA labels.',
-      'Integrates smooth client-side filtering and dynamic modal handling.'
+      'Replaces heavy third-party embeds with lightweight iframe facades to save multiple megabytes on initial load.',
+      'Neutralizes Cumulative Layout Shift through CSS layout containment and reserved aspect ratios.',
+      'Enforces WCAG 2.1 AA accessibility standards and semantic HTML across all components.'
     ]
   }
 ];

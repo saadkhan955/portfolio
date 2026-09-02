@@ -24,15 +24,14 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
           </div>
 
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white mb-6 leading-[1.12]">
-            Building High-Performance{' '}
+            Engineering Resilient{' '}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">
-              Enterprise Web Platforms
-            </span>{' '}
-            & Modern Applications.
+              Enterprise Drupal & Web Systems
+            </span>
           </h1>
 
           <p className="text-lg sm:text-xl text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed font-normal">
-            Frontend Developer & Drupal Specialist with <strong>5+ years</strong> delivering mission-critical digital systems, component-driven design architectures, and Core Web Vitals optimization.
+            Senior Drupal Developer & Full-Stack Web Engineer with <strong>5+ years</strong> delivering custom PHP 8.3 modules, Drupal 10/11 core migrations, Search API pipelines, and modern React applications.
           </p>
 
           <div className="flex flex-wrap items-center justify-center gap-4 mb-14">
@@ -69,31 +68,31 @@ export const Hero: React.FC<HeroProps> = ({ onOpenResume }) => {
               <Layers className="w-5 h-5 text-cyan-400 shrink-0 mt-0.5" />
               <div>
                 <div className="text-xs font-bold text-white">Drupal 10 & 11</div>
-                <div className="text-[11px] text-slate-400">Upgrades & SDC Themes</div>
+                <div className="text-[11px] text-slate-400">Custom Modules & Core Migrations</div>
               </div>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-900/40 border border-slate-800/60 flex items-start gap-3">
               <Code2 className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
               <div>
-                <div className="text-xs font-bold text-white">React 19 & TS</div>
-                <div className="text-[11px] text-slate-400">TanStack, Vite & SPAs</div>
+                <div className="text-xs font-bold text-white">Search API & PHP 8.3</div>
+                <div className="text-[11px] text-slate-400">Tokenizer Tuning & DB Search</div>
               </div>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-900/40 border border-slate-800/60 flex items-start gap-3">
               <Zap className="w-5 h-5 text-amber-400 shrink-0 mt-0.5" />
               <div>
-                <div className="text-xs font-bold text-white">Core Web Vitals</div>
-                <div className="text-[11px] text-slate-400">LCP, Zero CLS, Speed</div>
+                <div className="text-xs font-bold text-white">React 19 & Full-Stack</div>
+                <div className="text-[11px] text-slate-400">TypeScript, TanStack & SPAs</div>
               </div>
             </div>
 
             <div className="p-3.5 rounded-xl bg-slate-900/40 border border-slate-800/60 flex items-start gap-3">
               <ShieldCheck className="w-5 h-5 text-emerald-400 shrink-0 mt-0.5" />
               <div>
-                <div className="text-xs font-bold text-white">GDPR & Security</div>
-                <div className="text-[11px] text-slate-400">OneTrust & SA Patches</div>
+                <div className="text-xs font-bold text-white">Performance & CWV</div>
+                <div className="text-[11px] text-slate-400">Sub-second LCP & Zero CLS</div>
               </div>
             </div>
           </div>
