@@ -7,259 +7,235 @@ export const PERSONAL_INFO = {
   location: 'Mumbai, India',
   email: 'saadkhan955@gmail.com',
   github: 'https://github.com/saadkhan955',
-  bio: 'Frontend Developer with 5+ years of experience engineering resilient, high-performance web applications across Drupal and React/TypeScript ecosystems. Specialized in component-driven theming, design systems, Core Web Vitals optimization, GDPR compliance, and offline-first modern applications.',
+  bio: 'Frontend Developer with 5+ years of experience building responsive, scalable, and user-centric web applications across Drupal and ReactJS ecosystems. Specialized in Drupal theming, component-driven design systems, Core Web Vitals optimization, and modern frontend engineering.',
   experienceYears: '5+',
   enterpriseProjectsCount: '15+',
   productionCommits: '350+',
-  performanceFocus: '100% On-Device & CWV Focused',
+  performanceFocus: 'Performance & Accessibility Focused',
 };
 
 export const PROJECTS: Project[] = [
   {
     id: 'raf-benevolent-fund',
     title: 'RAF Benevolent Fund',
-    subtitle: 'Enterprise Charity Platform & Donation Engine',
+    subtitle: 'Enterprise Charity Web Platform & Content Experience',
     category: 'enterprise-drupal',
-    clientOrOrg: 'Royal Air Force Benevolent Fund (UK)',
+    clientOrOrg: 'Client Project via GAIN',
     timeframe: '2026',
-    description: 'High-traffic fundraising platform featuring custom donation flows, Google Consent Mode v2, and rigorous Core Web Vitals optimizations.',
-    longDescription: 'Engineered mission-critical fundraising features and performance overhauls for the UK’s leading RAF charity. Implemented full donation signpost hero widgets, automated Stripe donor metadata capture with self-healing webform sync, OneTrust cookie banner CLS containment, and dynamic social preview metatags.',
+    description: 'High-traffic enterprise web platform featuring responsive component-driven theming, dynamic content views, and Core Web Vitals optimizations.',
+    longDescription: 'Collaborated on frontend development, theme styling, and user interface enhancements for a major UK charity platform. Built reusable Twig components, optimized asset loading for fast page speeds, and ensured accessible, cross-browser compatible layouts.',
     liveUrl: 'https://rafbf.org',
-    techStack: ['Drupal 11', 'PHP 8.3', 'Stripe API', 'Twig', 'Tailwind CSS', 'OneTrust GDPR', 'Google Consent Mode v2', 'DDEV', 'Composer'],
+    techStack: ['Drupal', 'PHP', 'Twig', 'Tailwind CSS', 'JavaScript', 'HTML5', 'DDEV', 'Composer'],
     metrics: [
-      { label: 'Payload Reduction', value: '-3MB (Video Facade)' },
-      { label: 'Core / PHP', value: 'Drupal 11 / PHP 8.3' },
-      { label: 'Donation Engine', value: 'Stripe + Gift Aid' },
-      { label: 'Compliance', value: 'GDPR OneTrust v2' }
+      { label: 'Role', value: 'Frontend / Drupal' },
+      { label: 'Platform', value: 'Enterprise CMS' },
+      { label: 'Focus', value: 'Performance & UI' },
+      { label: 'Standards', value: 'WCAG Accessibility' }
     ],
     featured: true,
-    architectureHighlights: [
-      'Engineered YouTube iframe facade with srcdoc attributes, eliminating 3MB of blocking player scripts on initial page load.',
-      'Containerized OneTrust/CookiePro banners with CSS layout containment, neutralizing layout shifts (CLS < 0.02).',
-      'Synchronized Google Consent Mode v2 defaults with Tag Manager datalayer before script container execution.',
-      'Built a self-healing Stripe webhook handler capturing donor metadata and auto-reconciling webform submissions.'
-    ],
     keyContributions: [
-      'Built donation widget component with dynamic hero variations and responsive card layouts.',
-      'Upgraded core from Drupal 10 to Drupal 11 with PHP 8.3 config and custom MySQL 5.7 driver bridge.',
-      'Added in-page table-of-contents navigation paragraph across News and Event content types.',
-      'Built automated administrative entity usage dashboard with xlsx export.'
+      'Developed responsive hero and card components using custom Twig templates and modern CSS.',
+      'Created and customized Drupal Views to fetch and display dynamic content sections and media listings.',
+      'Implemented frontend performance improvements to optimize Core Web Vitals and user experience.',
+      'Ensured cross-browser compatibility and mobile responsiveness across devices.'
     ]
   },
   {
     id: 'adder-technology',
     title: 'Adder Technology',
-    subtitle: 'Global KVM Manufacturer Multi-region Platform',
+    subtitle: 'Global Technology Manufacturer Multi-Region Platform',
     category: 'enterprise-drupal',
-    clientOrOrg: 'Adder Technology (Global)',
+    clientOrOrg: 'Client Project via GAIN',
     timeframe: '2026',
-    description: 'Enterprise multi-region platform featuring custom paragraph design systems, Auto FAQ accordion engines, responsive video embeds, and search tokenization.',
-    longDescription: 'Maintained and enhanced Adder Technology’s multi-region digital presence. Built versatile Auto FAQ accordion paragraphs supporting dynamic colour schemes, resolved video autoplay positioning across Vimeo and YouTube, patched search hyphen tokenization, and implemented AI discovery endpoints via llms.txt.',
+    description: 'Global multi-region website featuring custom UI components, responsive accordion layouts, video embeds, and accessible design system styling.',
+    longDescription: 'Implemented frontend features and UI component styling for a global technology manufacturer. Built customizable accordion layouts, streamlined responsive media presentations, and ensured seamless design consistency across regions.',
     liveUrl: 'https://adder.com',
-    techStack: ['Drupal 10', 'PHP 8.3', 'Twig', 'SCSS', 'Search API', 'llms.txt', 'Acquia Cloud', 'Composer'],
+    techStack: ['Drupal', 'PHP', 'Twig', 'SCSS', 'JavaScript', 'HTML5', 'Acquia Cloud'],
     metrics: [
-      { label: 'Design System', value: 'Auto FAQ Accordions' },
-      { label: 'Layout Shift', value: '0 CLS on 360 Spin' },
-      { label: 'Video Embeds', value: 'Responsive Autoplay' },
-      { label: 'AI Discovery', value: 'llms.txt Standard' }
+      { label: 'Role', value: 'Frontend Developer' },
+      { label: 'Scope', value: 'Multi-Region' },
+      { label: 'UI Focus', value: 'Design System' },
+      { label: 'Components', value: 'Interactive UI' }
     ],
     featured: true,
-    architectureHighlights: [
-      'Implemented CSS mask-image techniques for SVG accordion chevrons to seamlessly inherit theme color variables.',
-      'Optimized search tokenizer treating hyphens to ensure precise product model searches succeed.',
-      'Stabilized responsive 360-degree product viewport aspect ratios to prevent content reflow during asset download.'
-    ],
     keyContributions: [
-      'Engineered Auto FAQ accordion paragraph component supporting dynamic high-contrast brand colour schemes.',
-      'Applied routine security patches for Entity Browser and Diff modules.',
-      'Integrated llms.txt configuration to expose structured site discovery to AI search crawlers.'
+      'Built reusable accordion and content paragraph components supporting flexible colour variations.',
+      'Enhanced responsive video presentation and interactive media elements across product pages.',
+      'Refactored styles for maintainability and alignment with brand design guidelines.',
+      'Maintained theme styling adherence to agreed development processes and timelines.'
     ]
   },
   {
     id: 'leonard-cheshire',
     title: 'Leonard Cheshire',
-    subtitle: 'National Disability Charity Web Platform',
+    subtitle: 'National Non-Profit Digital Presence',
     category: 'enterprise-drupal',
-    clientOrOrg: 'Leonard Cheshire (UK)',
+    clientOrOrg: 'Client Project via GAIN',
     timeframe: '2026',
-    description: 'UK disability charity platform maintenance including Solr-to-Database Search migration, CleanTalk GDPR session privacy, and Acquia SQL trigger sanitization.',
-    longDescription: 'Managed critical platform infrastructure and UI improvements for Leonard Cheshire. Executed a complete search engine migration from external Solr to high-performance database search, updated privacy-first session handling for anti-spam systems, and sanitized legacy database triggers.',
+    description: 'Large-scale accessibility-first digital presence delivering structured content navigation, search discovery, and responsive page layouts.',
+    longDescription: 'Maintained and developed user interface components and content structures for a leading non-profit organization. Focused on high-contrast accessibility standards, search page enhancements, and clean component theming.',
     liveUrl: 'https://leonardcheshire.org',
-    techStack: ['Drupal 10', 'PHP 8.3', 'Search API DB', 'CleanTalk', 'Acquia Cloud', 'Sentry', 'Twig'],
+    techStack: ['Drupal', 'PHP', 'Twig', 'Search API', 'CSS3', 'JavaScript', 'Acquia Cloud'],
     metrics: [
-      { label: 'Search Backend', value: 'Search API DB' },
-      { label: 'Security / Privacy', value: 'Cookie-Free Sessions' },
-      { label: 'Error Monitoring', value: 'Sentry Production' },
-      { label: 'Cloud Sync', value: '100% Clean Sync' }
+      { label: 'Role', value: 'Drupal Developer' },
+      { label: 'Focus', value: 'Accessibility' },
+      { label: 'Theming', value: 'Component-Driven' },
+      { label: 'Navigation', value: 'Dynamic Menus' }
     ],
     featured: true,
-    architectureHighlights: [
-      'Migrated search indexing pipeline from Apache Solr to search_api_db with custom rendered item view modes, cutting infrastructure costs while retaining search relevancy.',
-      'Sanitized Acquia database duplication pipeline by eliminating orphan MySQL trigger routines.'
-    ],
     keyContributions: [
-      'Configured Sentry error monitoring and alerting for production tracking.',
-      'Expanded paragraph library with full-bleed aspect ratio choices.'
+      'Maintained responsive themes and layout templates ensuring accessibility compliance.',
+      'Customized search results pages and content listing views.',
+      'Integrated Webforms and custom layout blocks for campaign initiatives.'
     ]
   },
   {
     id: 'clpe',
     title: 'Centre for Literacy in Primary Education',
-    subtitle: 'Educational Publishing & Commerce Platform',
+    subtitle: 'Educational Publishing & Literacy Platform',
     category: 'enterprise-drupal',
-    clientOrOrg: 'CLPE (UK)',
+    clientOrOrg: 'Client Project via GAIN',
     timeframe: '2026',
-    description: 'Educational publishing and commerce platform security management, GDPR registration opt-ins, and Commerce 3.3.6 updates.',
-    longDescription: 'Maintained CLPE’s digital bookstore and training hub. Performed critical Drupal Core 10.6.13 and Guzzle security updates, refactored user registration to be strictly GDPR-compliant with automated data migration, and resolved commerce order entity schema mismatches.',
+    description: 'Educational publishing hub providing digital learning resources, book listings, and streamlined user account journeys.',
+    longDescription: 'Contributed to website maintenance, module integration, and user interface improvements. Focused on form validation, user registration journeys, and reliable template rendering.',
     liveUrl: 'https://clpe.org.uk',
-    techStack: ['Drupal 10', 'Drupal Commerce 3', 'PHP 8.3', 'Guzzle', 'Twig', 'DDEV', 'Git'],
+    techStack: ['Drupal', 'PHP', 'Twig', 'Commerce', 'HTML5', 'CSS3', 'Git'],
     metrics: [
-      { label: 'Core Version', value: 'Drupal 10.6.13' },
-      { label: 'Commerce Engine', value: 'Commerce 3.3.6' },
-      { label: 'GDPR Consent', value: '100% Compliant' },
-      { label: 'Architecture', value: 'Headless / Hybrid' }
+      { label: 'Role', value: 'Drupal Developer' },
+      { label: 'Domain', value: 'Education' },
+      { label: 'Modules', value: 'Custom & Contrib' },
+      { label: 'Journeys', value: 'User Experience' }
     ],
     featured: false,
-    architectureHighlights: [
-      'Resolved complex Composer dependency conflicts across core-recommended, Guzzle, and PSR packages to enforce zero-vulnerability builds.'
-    ],
     keyContributions: [
-      'Executed schema update hooks repairing commerce_order entity definitions.',
-      'Standardized user consent capture across checkout and registration forms.'
+      'Integrated and configured Drupal modules and custom Webforms.',
+      'Customized user registration and account interaction flows.',
+      'Ensured reliable template rendering and clean frontend code standards.'
     ]
   },
   {
     id: 'iws-aquasuite',
-    title: 'IWS AquaSuite ERP & Web Platform',
-    subtitle: 'Full-Stack Water Treatment Enterprise System',
+    title: 'IWS AquaSuite & Web Platform',
+    subtitle: 'Commercial Platform & Business Suite',
     category: 'react-fullstack',
-    clientOrOrg: 'Icare Water Solutions',
+    clientOrOrg: 'Commercial Project',
     timeframe: '2026',
-    description: 'Modern full-stack web platform and enterprise ERP monorepo built with TanStack Start, React 19, Tailwind CSS, and database-driven PDF document generation.',
-    longDescription: 'Architected and developed the digital ecosystem for Icare Water Solutions. Features a high-performance marketing web app built with TanStack Start, an ERP monorepo with quotation generation using React-PDF renderer, LCP hero preloading, and Anti-Slop Oxlint quality enforcement.',
+    description: 'Modern full-stack web platform built with TanStack Start, React 19, TypeScript, Tailwind CSS, and automated document print layouts.',
+    longDescription: 'Architected and engineered a comprehensive commercial web platform. Built with modern React 19 and TanStack Start, featuring interactive equipment showcases, optimized hero image loading, and dynamic PDF document layout capabilities.',
     liveUrl: 'https://icarewatersolution.com',
     githubUrl: 'https://github.com/saadkhan955',
-    techStack: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS', 'Vite', 'React-PDF', 'Oxlint'],
+    techStack: ['React 19', 'TanStack Start', 'TypeScript', 'Tailwind CSS', 'Vite', 'React-PDF'],
     metrics: [
-      { label: 'React Engine', value: 'React 19 Reconciler' },
-      { label: 'Lighthouse Score', value: '98+ Performance' },
-      { label: 'Architecture', value: 'ERP Monorepo' },
-      { label: 'Document Engine', value: 'Live PDF Print' }
+      { label: 'React Version', value: 'React 19' },
+      { label: 'Performance', value: '98+ Lighthouse' },
+      { label: 'Styling', value: 'Tailwind CSS' },
+      { label: 'Build Tool', value: 'Vite' }
     ],
     featured: true,
-    architectureHighlights: [
-      'Resolved React 19 reconciler conflicts in PDF rendering using custom renderer forks and serverExternalPackages bundling.',
-      'Preloaded critical hero assets and configured fetchPriority="high" for sub-second Largest Contentful Paint.',
-      'Applied strict Oxlint anti-slop rules and TypeScript strict mode across monorepo packages.'
-    ],
     keyContributions: [
-      'Designed dynamic document print layout with automated browser print invocation.',
-      'Built responsive product catalog with equipment dimension sheets and lead forms.'
+      'Built fast, SEO-optimized page routing using TanStack Start and modern React paradigms.',
+      'Implemented responsive product catalogs with detailed specification sheets.',
+      'Engineered dynamic print templates and clean document generation layouts.',
+      'Applied modern code quality tooling and type-safe component architectures.'
     ]
   },
   {
     id: 'mystic-favicon-studio',
     title: 'Mystic Favicon Studio',
-    subtitle: 'Vector & Raster Favicon Generator Web Application',
+    subtitle: 'Vector & Raster Asset Generator Web Application',
     category: 'react-fullstack',
     clientOrOrg: 'Independent Product',
     timeframe: '2026',
-    description: 'Comprehensive vector and bitmap favicon generation studio producing multi-resolution assets (16x16 to 512x512, ICO, Apple Touch icons, web manifests).',
-    longDescription: 'Created a developer and designer utility supporting live SVG fill adaptation, squircle shape presets, safe margin rulers, real-time browser tab preview simulations, and one-click ZIP packaging with HTML header code snippet generator.',
+    description: 'Interactive web application allowing developers to create, preview, and export multi-resolution favicon assets (16x16 to 512x512, ICO, Apple Touch icons).',
+    longDescription: 'Created a developer productivity tool supporting real-time SVG color manipulation, squircle shapes, safe margin guidelines, live browser tab simulations, and one-click ZIP downloads with generated HTML code snippets.',
     liveUrl: 'https://mysticfavicon.tech',
     githubUrl: 'https://github.com/saadkhan955',
-    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Canvas API', 'Web Manifests'],
+    techStack: ['React', 'TypeScript', 'Vite', 'Tailwind CSS', 'Canvas API'],
     metrics: [
       { label: 'Resolutions', value: '16x16 to 512x512' },
       { label: 'Formats', value: 'ICO, PNG, SVG, ZIP' },
-      { label: 'Engine', value: 'Client Canvas API' },
-      { label: 'Performance', value: 'Zero Server Roundtrips' }
+      { label: 'Processing', value: 'Client-Side Canvas' },
+      { label: 'Live App', value: 'mysticfavicon.tech' }
     ],
     featured: true,
-    architectureHighlights: [
-      'Engineered in-browser Canvas rendering pipeline creating crisp multi-layer ICO binaries without server roundtrips.'
-    ],
     keyContributions: [
-      'Implemented Top 10 Web Design System color presets and real-time SVG currentColor replacement.',
-      'Built live browser mockup preview showing how icons render in Chrome, Safari, and mobile home screens.'
+      'Developed real-time canvas rendering pipeline generating multi-format icons in the browser.',
+      'Implemented curated modern web design system color palettes and SVG mode selectors.',
+      'Built live browser mockup preview simulating tabs, bookmarks, and mobile home screens.'
     ]
   },
   {
     id: 'ainexorium-platform',
     title: 'Ainexorium Platform',
-    subtitle: 'Full-Stack EdTech Operations & Staff Administration System',
+    subtitle: 'EdTech Operations & Administration System',
     category: 'react-fullstack',
     clientOrOrg: 'Ainexorium Digital',
     timeframe: '2026',
-    description: 'Full-stack education and staff administration platform with automated employee ID retirement pools, attendance tracking, and responsive admin dashboard.',
-    longDescription: 'Engineered Ainexorium’s institutional web dashboard and staff management platform. Features dynamic role filtering, automated staff ID reassignment workflows, daily attendance CSV auditing, and strict component-driven state architecture.',
+    description: 'Component-driven educational management platform with interactive administrative dashboards and data reporting.',
+    longDescription: 'Developed an interactive education web platform delivering institutional content, administrative dashboards, and staff management interfaces through a scalable React component system.',
     liveUrl: 'https://ainexorium.com',
     githubUrl: 'https://github.com/saadkhan955',
-    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'State Management', 'Oxlint'],
+    techStack: ['React', 'TypeScript', 'Tailwind CSS', 'Vite', 'Modern State'],
     metrics: [
       { label: 'Platform', value: 'React Web Platform' },
-      { label: 'Features', value: 'Staff ID Pool Manager' },
-      { label: 'Code Quality', value: 'Anti-Slop Linted' },
-      { label: 'Reporting', value: 'Automated CSV Sync' }
+      { label: 'Design', value: 'Component-Driven' },
+      { label: 'Reporting', value: 'Data Export Tools' },
+      { label: 'Live App', value: 'ainexorium.com' }
     ],
     featured: false,
-    architectureHighlights: [
-      'Built a resilient ID lifecycle management system that moves deactivated employee IDs to a retired pool and prevents sequence gaps.'
-    ],
     keyContributions: [
-      'Built administration management with role filtering and instant data synchronization.',
-      'Created attendance logging and automated monthly CSV export system.'
+      'Built structured administration dashboards with dynamic role filtering and data views.',
+      'Created attendance management and CSV export utilities for institutional records.',
+      'Maintained type safety and consistent component styling across all views.'
     ]
   },
   {
     id: 'youtube-tabs-to-playlist',
     title: 'TabFlow for YouTube',
-    subtitle: 'Chrome Extension (MV3) & Playlist Organizer',
+    subtitle: 'Chrome Extension & Playlist Organizer',
     category: 'chrome-extensions',
     clientOrOrg: 'Open Source / Web Store',
     timeframe: '2026',
-    description: 'Manifest V3 Chrome extension and landing page that converts all open YouTube tabs into organized, trackable YouTube playlists with instant theme switching.',
-    longDescription: 'Created a tab-organizing browser extension built strictly under Chrome Extension Manifest V3 security requirements (zero inline scripts, CSP-compliant). Features automatic light/dark theme synchronization, live playlist sync, and a Cloudflare-hosted landing page.',
+    description: 'Manifest V3 browser extension and modern landing page that converts open YouTube tabs into organized, trackable YouTube playlists with instant theme switching.',
+    longDescription: 'Created a tab-organizing browser extension built under Chrome Extension Manifest V3 security standards. Features automatic light/dark theme switching, live playlist synchronization, and a dedicated landing page.',
     liveUrl: 'https://tfy.khansaad.dev/',
     githubUrl: 'https://github.com/saadkhan955/youtube-tabs-to-playlist',
-    techStack: ['JavaScript (ES6+)', 'Chrome Extension API (MV3)', 'Tailwind CSS', 'HTML5', 'Cloudflare Pages'],
+    techStack: ['JavaScript (ES6+)', 'Chrome Extension API', 'Tailwind CSS', 'HTML5', 'Cloudflare Pages'],
     metrics: [
       { label: 'Extension Spec', value: 'Chrome MV3' },
-      { label: 'Security', value: '100% CSP Compliant' },
       { label: 'Theme Support', value: 'Dark / Light / Auto' },
+      { label: 'Live Site', value: 'tfy.khansaad.dev' },
       { label: 'Hosting', value: 'Cloudflare Pages' }
     ],
     featured: false,
-    architectureHighlights: [
-      'Architected zero-inline-script popup interface complying strictly with Chrome Web Store CSP guidelines.'
-    ],
     keyContributions: [
-      'Engineered instant playlist dropdown synchronization across tabs with one-click reload.',
-      'Designed responsive landing page with privacy policy and Google Search Console verification.'
+      'Engineered tab detection and playlist creation workflows using modern browser extension APIs.',
+      'Implemented responsive dark/light theme switching with instant system preference detection.',
+      'Designed responsive landing page with full privacy policy documentation.'
     ]
   },
   {
     id: 'tab-url-copier',
     title: 'Tab URL Copier',
-    subtitle: 'High-Efficiency Browser Extension (MV3)',
+    subtitle: 'High-Efficiency Browser Extension',
     category: 'chrome-extensions',
     clientOrOrg: 'Open Source / Web Store',
     timeframe: '2026',
     description: 'Lightweight browser extension allowing instant batch copying of active browser tabs in Markdown, HTML, Plain Text, or CSV formats.',
-    longDescription: 'Engineered a developer productivity tool that formats and exports active window or all-window tab URLs with custom templates and keyboard shortcuts.',
+    longDescription: 'Engineered a developer productivity tool that formats and exports browser tab URLs with customizable templates and keyboard shortcuts.',
     liveUrl: 'https://tuc.khansaad.dev/',
     githubUrl: 'https://github.com/saadkhan955/tab-url-copier',
     techStack: ['JavaScript', 'Chrome Extension API', 'HTML5', 'CSS3', 'Cloudflare Pages'],
     metrics: [
       { label: 'Export Modes', value: 'Markdown, HTML, CSV, Text' },
-      { label: 'Performance', value: '< 10ms Execution' },
-      { label: 'Security', value: 'Zero External Calls' },
+      { label: 'Performance', value: 'Instant Copy' },
+      { label: 'Live Site', value: 'tuc.khansaad.dev' },
       { label: 'Hosting', value: 'Cloudflare Pages' }
     ],
     featured: false,
     keyContributions: [
       'Created multi-format clipboard formatting engine with custom template delimiters.',
-      'Deployed official landing page with OpenGraph metadata and canonical URL mapping.'
+      'Deployed official landing page with responsive documentation on Cloudflare Pages.'
     ]
   },
   {
@@ -271,16 +247,16 @@ export const PROJECTS: Project[] = [
     timeframe: '2026',
     description: 'Native macOS menu bar utility built with Objective-C / Swift featuring Universal binary support, configurable motion intervals, and auto-stop timers.',
     longDescription: 'Enhanced and shipped v1.5.0 of the macOS utility, delivering Apple Silicon + Intel Universal binaries, persistent codesigning routines, and low-energy background mouse motion simulation.',
-    techStack: ['Objective-C', 'Swift', 'macOS Cocoa', 'Universal Binary', 'Code Signing'],
+    techStack: ['Objective-C', 'Swift', 'macOS Cocoa', 'Universal Binary'],
     metrics: [
       { label: 'Architecture', value: 'Apple Silicon + Intel' },
       { label: 'Version', value: 'v1.5.0 Release' },
-      { label: 'Resource Impact', value: '< 0.1% CPU Usage' }
+      { label: 'Platform', value: 'macOS Menu Bar' }
     ],
     featured: false,
     keyContributions: [
-      'Configured automated universal binary build and DMG packaging script.',
-      'Added user-configurable movement interval presets and idle sleep prevention.'
+      'Configured universal binary build pipeline supporting both Apple Silicon and Intel Macs.',
+      'Added user-configurable movement interval presets and idle sleep prevention options.'
     ]
   }
 ];
@@ -292,42 +268,43 @@ export const EXPERIENCES: Experience[] = [
     location: 'Remote',
     period: 'April 2026 – Present',
     current: true,
-    description: 'Lead Drupal engineering, core upgrades, security remediation, and custom component development across high-profile enterprise client portfolios.',
-    projectsSummary: 'RAF Benevolent Fund (rafbf.org), Adder Technology (adder.com), Leonard Cheshire (leonardcheshire.org), CLPE (clpe.org.uk), Kick It Out (kickitout.org), RCoA CPOC.',
+    description: 'Gather and analyse requirements, produce technical designs, and build web applications using Drupal CMS.',
+    projectsSummary: 'Enterprise client projects including rafbf.org, adder.com, leonardcheshire.org, clpe.org.uk, kickitout.org.',
     deliverables: [
-      'Architected Drupal 11 upgrades with PHP 8.3 migrations and custom MySQL driver bridges.',
-      'Engineered Stripe donation workflows with self-healing webform sync and Gift Aid tax compliance.',
-      'Executed Solr-to-Database Search migration (search_api_db) for Leonard Cheshire.',
-      'Neutralized Cumulative Layout Shift (CLS) on major portals via OneTrust CSS layout containment.',
-      'Integrated Google Consent Mode v2 and eliminated 3MB player payloads with YouTube iframe facades.'
+      'Creating and customizing Views to fetch and display dynamic content sections, blocks, and media listings.',
+      'Integrating and configuring custom Drupal modules, Webforms, and third-party services.',
+      'Performing routine Drupal core and module security updates, maintenance, and bug fixes.',
+      'Maintaining website adherence to development processes, agreed timelines, and coding standards.',
+      'Testing and debugging functionality to ensure reliable, error-free pages.'
     ],
-    technologies: ['Drupal 10/11', 'PHP 8.3', 'Twig', 'Tailwind CSS', 'Search API', 'Stripe', 'OneTrust', 'DDEV', 'Acquia Cloud']
+    technologies: ['Drupal 10/11', 'PHP 8.3', 'Twig', 'Tailwind CSS', 'JavaScript', 'Webform', 'DDEV', 'Composer']
   },
   {
     company: 'BBG Bitbase India',
     role: 'Drupal Frontend Engineer',
     location: 'Remote',
     period: 'May 2025 – Jan 2026',
-    description: 'Spearheaded frontend architecture, design system implementation, and component-driven theming for multisite enterprise platforms.',
-    projectsSummary: 'Takeda Multisite Healthcare Platform (takeda-gastroenterologie.de, dengue.de, passion-haemostaseologie.de).',
+    description: 'Gathered and analysed frontend and UI/UX requirements to translate them into Drupal pages, layouts, and components.',
+    projectsSummary: 'Takeda multisite platform (takeda-gastroenterologie.de, dengue.de, passion-haemostaseologie.de).',
     deliverables: [
-      'Developed reusable Twig component libraries (hero cards, CTAs, navigation, modals, event listings) matching Figma specifications.',
-      'Implemented responsive design systems across desktop, tablet, and mobile with cross-browser compatibility.',
-      'Built JavaScript & jQuery interactive features including dynamic form state management, modals, and AJAX filtering.'
+      'Designed and implemented Drupal themes using Twig, SCSS, and JavaScript as per provided designs and style guidelines.',
+      'Created reusable Twig templates, preprocessors, and SCSS for components (hero cards, CTAs, navigation, event listings).',
+      'Implemented responsive design for mobile, tablet, and desktop with cross-browser compatibility.',
+      'Created and enhanced forms with validation including registration forms, modals, and Webform integrations.'
     ],
-    technologies: ['Drupal 10', 'PHP 8.3', 'Twig', 'SCSS', 'JavaScript (ES6+)', 'Pattern Lab', 'DDEV']
+    technologies: ['Drupal 10', 'PHP 8.3', 'Twig', 'SCSS', 'JavaScript', 'jQuery', 'DDEV']
   },
   {
     company: 'MSOL Technologies Pvt. Ltd.',
     role: 'Drupal Frontend Developer',
     location: 'Remote',
     period: 'April 2024 – Sep 2024',
-    description: 'Built custom webforms, template overrides, and responsive themes from Figma designs for Middle Eastern enterprise clients.',
-    projectsSummary: 'Wasl Dubai Real Estate Portal (wasl.ae/en).',
+    description: 'Built custom webforms and components based on Figma design using Twig, HTML, SCSS, PHP, and JavaScript.',
+    projectsSummary: 'Wasl Dubai real estate platform (wasl.ae/en).',
     deliverables: [
-      'Scaffolded local Lando development environments, Composer workflows, and Drush automation.',
-      'Configured Gulp asset compilation pipelines for SCSS and JavaScript minification.',
-      'Integrated custom Webforms and preprocessing hooks for localized RTL/LTR experiences.'
+      'Installed and configured Drupal instances locally using Lando, Composer, and Drush.',
+      'Configured Gulp build tools to compile SCSS into CSS and minify JavaScript.',
+      'Created custom components and webforms matching Figma design specifications.'
     ],
     technologies: ['Drupal 9/10', 'Lando', 'Twig', 'SCSS', 'Gulp', 'PHP', 'Webform']
   },
@@ -336,11 +313,12 @@ export const EXPERIENCES: Experience[] = [
     role: 'Drupal Frontend Developer',
     location: 'Remote',
     period: 'Mar 2022 – Jan 2023',
-    description: 'Engineered component-based themes, Pattern Lab component libraries, and Layout Builder integrations.',
-    projectsSummary: 'ETF.com (etf.com), Enterprise Publishing Platforms.',
+    description: 'Developed Drupal themes from scratch based on Figma designs using HTML, CSS, Sass, JavaScript, template overrides, and Pattern Lab.',
+    projectsSummary: 'ETF.com (etf.com), Enterprise publishing platforms.',
     deliverables: [
-      'Built Drupal themes from scratch with Pattern Lab design systems and atomic components.',
-      'Configured Layout Builder templates allowing content teams to construct custom landing pages.'
+      'Set up theme structures (.info, .libraries, .theme files and template directories).',
+      'Used Pattern Lab to break down UI into smaller reusable components.',
+      'Configured Layout Builder to create dynamic pages according to design systems.'
     ],
     technologies: ['Drupal 9', 'Pattern Lab', 'Layout Builder', 'Sass', 'JavaScript', 'Gulp']
   },
@@ -349,108 +327,110 @@ export const EXPERIENCES: Experience[] = [
     role: 'Web Developer',
     location: 'Navi Mumbai',
     period: 'Dec 2018 – Mar 2022',
-    description: 'Developed accessible, high-compliance government portals compliant with W3C and GIGW (Guidelines for Indian Government Websites).',
-    projectsSummary: 'Indian Government Portals (maef.nic.in, py.gov.in, plantauthority.gov.in).',
+    description: 'Developed accessible, responsive websites for Indian government departments (maef.nic.in, py.gov.in, plantauthority.gov.in).',
+    projectsSummary: 'Indian government department portals.',
     deliverables: [
-      'Ensured strict WCAG 2.1 AA screen-reader accessibility and multilingual translation support.',
-      'Built interactive JavaScript data chart widgets and responsive government information dashboards.'
+      'Ensured strict W3C validation, GIGW guidelines, and screen-reader accessibility.',
+      'Implemented multi-language translation support and responsive page layouts.',
+      'Built interactive JavaScript chart widgets and dynamic data presentation tables.'
     ],
-    technologies: ['HTML5', 'CSS3', 'JavaScript', 'Accessibility (WCAG/GIGW)', 'PHP', 'MySQL']
+    technologies: ['HTML5', 'CSS3', 'JavaScript', 'W3C Accessibility', 'PHP', 'MySQL']
   }
 ];
 
 export const SKILL_GROUPS: SkillGroup[] = [
   {
     name: 'Drupal & CMS Architecture',
-    description: 'Enterprise multisite systems, core upgrades, and headless APIs',
+    description: 'Enterprise multisite systems, custom theming, and layout builders',
     iconName: 'Layers',
     skills: [
-      { name: 'Drupal 10 & 11 Core', level: 'Expert', highlight: true },
-      { name: 'Twig & SDC Theming', level: 'Expert', highlight: true },
-      { name: 'PHP 8.3 & OOP Architecture', level: 'Expert', highlight: true },
-      { name: 'Search API (DB & Solr)', level: 'Expert', highlight: true },
-      { name: 'Custom Modules & Preprocessors', level: 'Expert', highlight: true },
+      { name: 'Drupal (7/8/10/11)', level: 'Expert', highlight: true },
+      { name: 'Twig Templating & SDC', level: 'Expert', highlight: true },
+      { name: 'PHP 8.3 & Preprocessors', level: 'Expert', highlight: true },
       { name: 'Drush & Configuration Management', level: 'Expert', highlight: true },
-      { name: 'Sanity Headless CMS', level: 'Advanced' },
-      { name: 'Layout Builder & Pattern Lab', level: 'Advanced' }
+      { name: 'Views & Media Configurations', level: 'Expert', highlight: true },
+      { name: 'Webforms & Custom Blocks', level: 'Expert', highlight: true },
+      { name: 'Layout Builder & Pattern Lab', level: 'Advanced' },
+      { name: 'Sanity Headless CMS', level: 'Advanced' }
     ]
   },
   {
-    name: 'Modern Frontend & React',
-    description: 'Type-safe SPAs, SSR monorepos, and responsive UI engineering',
+    name: 'Frontend & Modern Web',
+    description: 'Component-driven user interfaces, SPAs, and responsive design',
     iconName: 'Code',
     skills: [
-      { name: 'React 19 & React 18', level: 'Expert', highlight: true },
-      { name: 'TypeScript', level: 'Expert', highlight: true },
-      { name: 'Tailwind CSS (v3 & v4)', level: 'Expert', highlight: true },
-      { name: 'TanStack Start & Router', level: 'Advanced', highlight: true },
-      { name: 'Vite & Build Tooling', level: 'Expert', highlight: true },
-      { name: 'Zustand & State Machines', level: 'Advanced' },
-      { name: 'Modern CSS & Flexbox/Grid', level: 'Expert', highlight: true },
-      { name: 'Canvas & SVG Manipulation', level: 'Advanced' }
+      { name: 'ReactJS & TypeScript', level: 'Expert', highlight: true },
+      { name: 'HTML5 & Semantic Markup', level: 'Expert', highlight: true },
+      { name: 'CSS3 / SCSS / PostCSS', level: 'Expert', highlight: true },
+      { name: 'Tailwind CSS', level: 'Expert', highlight: true },
+      { name: 'JavaScript (ES6+) & jQuery', level: 'Expert', highlight: true },
+      { name: 'TanStack Start & Vite', level: 'Advanced', highlight: true },
+      { name: 'Responsive Mobile-First Design', level: 'Expert', highlight: true },
+      { name: 'Canvas API & SVG Manipulation', level: 'Advanced' }
     ]
   },
   {
-    name: 'Performance & Compliance',
-    description: 'Sub-second loads, zero layout shifts, and strict GDPR privacy',
+    name: 'Performance & Quality',
+    description: 'Core Web Vitals, accessibility, and cross-browser reliability',
     iconName: 'Zap',
     skills: [
-      { name: 'Core Web Vitals (LCP, CLS, INP)', level: 'Expert', highlight: true },
-      { name: 'OneTrust & CookiePro GDPR', level: 'Expert', highlight: true },
-      { name: 'Google Consent Mode v2', level: 'Advanced', highlight: true },
-      { name: 'Responsive WebP Image Pipelines', level: 'Expert', highlight: true },
-      { name: 'Iframe Facade Payload Optimization', level: 'Expert', highlight: true },
-      { name: 'WCAG 2.1 AA Accessibility', level: 'Expert', highlight: true }
+      { name: 'Core Web Vitals Optimization', level: 'Expert', highlight: true },
+      { name: 'WCAG 2.1 AA Accessibility', level: 'Expert', highlight: true },
+      { name: 'Cross-Browser Compatibility', level: 'Expert', highlight: true },
+      { name: 'Image Optimization & WebP', level: 'Expert', highlight: true },
+      { name: 'Code Standards (PHPCS / ESLint)', level: 'Expert', highlight: true }
     ]
   },
   {
-    name: 'Tools, DevOps & Cloud',
-    description: 'Containerized environments, cloud hosting, and continuous deployment',
+    name: 'Tools & Workflow',
+    description: 'Local development environments, build systems, and Agile collaboration',
     iconName: 'Terminal',
     skills: [
+      { name: 'Git & Version Control', level: 'Expert', highlight: true },
       { name: 'DDEV & Lando Containers', level: 'Expert', highlight: true },
-      { name: 'Composer & NPM Ecosystems', level: 'Expert', highlight: true },
-      { name: 'Acquia Cloud & Pantheon Hosting', level: 'Advanced', highlight: true },
+      { name: 'Composer & NPM / Vite', level: 'Expert', highlight: true },
       { name: 'Cloudflare Pages & Workers', level: 'Advanced', highlight: true },
-      { name: 'Chrome Extensions (MV3)', level: 'Advanced', highlight: true },
-      { name: 'Git & Agile Sprint Workflows', level: 'Expert', highlight: true }
+      { name: 'Chrome Extension Development (MV3)', level: 'Advanced', highlight: true },
+      { name: 'Jira & ClickUp Sprint Management', level: 'Expert', highlight: true }
     ]
   }
 ];
 
 export const ARCHITECTURE_CASE_STUDIES = [
   {
-    id: 'cwv-opt',
-    title: 'Core Web Vitals & 3MB Payload Elimination',
+    id: 'component-theming',
+    title: 'Component-Driven Theming & Design Systems',
+    category: 'Frontend Architecture',
+    summary: 'Standardizing UI building blocks across enterprise platforms using reusable Twig templates, modern SCSS/Tailwind, and component-first architectures.',
+    impact: 'Accelerates feature delivery, maintains brand consistency across multi-page portals, and minimizes styling regressions.',
+    points: [
+      'Encapsulates markup, styles, and behaviors into modular, reusable UI components.',
+      'Implements flexible layout variations (hero sections, cards, modals, navigation) from Figma specifications.',
+      'Ensures semantic HTML5 structure with strict accessibility compliance.'
+    ]
+  },
+  {
+    id: 'cwv-performance',
+    title: 'Core Web Vitals & Asset Optimization',
     category: 'Performance Engineering',
-    summary: 'Optimized RAF Benevolent Fund portal by converting heavy third-party YouTube embeds into native lightweight facades and containing cookie banner shifts.',
-    impact: 'Reduced initial JavaScript transfer by 3MB; achieved CLS < 0.02 and boosted mobile PageSpeed scores significantly.',
+    summary: 'Optimizing high-traffic enterprise portals for fast loading times, responsive interactions, and zero visual layout shifts.',
+    impact: 'Substantially boosts Lighthouse performance scores and improves search engine ranking signals.',
     points: [
-      'Replaced default iframe players with custom srcdoc facades that only initialize on explicit user intent.',
-      'Applied CSS contain: layout size on dynamic OneTrust elements to prevent DOM reflow.',
-      'Implemented native loading="lazy" and preconnect hints for donation APIs in html.html.twig.'
+      'Implements modern image loading strategies (WebP formats, responsive picture elements, native lazy-loading).',
+      'Minimizes parser-blocking JavaScript payloads and defers non-critical assets.',
+      'Neutralizes Cumulative Layout Shift (CLS) by reserving dimensional aspect ratios for dynamic embeds.'
     ]
   },
   {
-    id: 'search-migration',
-    title: 'Solr to Search API DB Migration',
-    category: 'Backend & Infrastructure',
-    summary: 'Migrated Leonard Cheshire search backend from an external Apache Solr cluster to native Drupal database search (search_api_db).',
-    impact: 'Simplified cloud infrastructure, eliminated external search network latency, and resolved indexing warnings.',
+    id: 'accessible-forms',
+    title: 'Responsive & Accessible Form Journeys',
+    category: 'User Experience',
+    summary: 'Designing intuitive, accessible form interfaces, interactive filters, and client-side validation workflows.',
+    impact: 'Enhances form conversion rates and guarantees full keyboard navigation and screen-reader usability.',
     points: [
-      'Configured custom search_index view mode for rendered items to optimize token indexing.',
-      'Maintained exact fulltext relevance filtering and facet compatibility across content types.'
-    ]
-  },
-  {
-    id: 'stripe-self-healing',
-    title: 'Self-Healing Stripe Donation Architecture',
-    category: 'Payment Integration',
-    summary: 'Engineered Stripe donor metadata capture and error recovery mechanism for charity campaign forms.',
-    impact: 'Prevented lost donation records due to browser drop-offs or network interruptions; 100% submission reconciliation.',
-    points: [
-      'Attached structured donor metadata to Stripe payment intent sessions.',
-      'Built asynchronous fallback reconciliation hook to automatically create missing webform submission records.'
+      'Builds multi-step Webforms with clear error feedback and instant validation.',
+      'Ensures full WCAG 2.1 AA keyboard navigation, high color contrast, and proper ARIA labels.',
+      'Integrates smooth client-side filtering and dynamic modal handling.'
     ]
   }
 ];

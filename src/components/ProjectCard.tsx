@@ -71,7 +71,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, onSelect }) =
             onClick={() => onSelect(project)}
             className="flex items-center gap-1.5 text-xs font-bold text-cyan-400 hover:text-cyan-300 transition-colors group/btn cursor-pointer"
           >
-            <span>View Architecture & Details</span>
+            <span>View Project Overview</span>
             <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-0.5 transition-transform" />
           </button>
 

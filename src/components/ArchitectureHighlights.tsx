@@ -16,14 +16,14 @@ export const ArchitectureHighlights: React.FC = () => {
             <span>Engineering Principles</span>
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
-            Architectural Case Studies
+            Frontend Architecture & Standards
           </h2>
           <p className="text-sm sm:text-base text-slate-400 mt-2">
-            Deep dives into specific engineering problems solved across performance, regulatory compliance, and backend systems.
+            Core methodologies applied across enterprise applications to ensure performance, maintainability, and accessibility.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 mb-8">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
           {ARCHITECTURE_CASE_STUDIES.map((study, idx) => {
             const active = activeTab === idx;
             return (
@@ -66,7 +66,7 @@ export const ArchitectureHighlights: React.FC = () => {
 
               <div className="p-4 rounded-xl bg-cyan-950/30 border border-cyan-800/40">
                 <div className="text-xs font-bold text-cyan-400 uppercase tracking-wider mb-1">
-                  Measured Impact
+                  Target Outcome
                 </div>
                 <div className="text-sm font-semibold text-white">
                   {activeStudy.impact}
@@ -76,7 +76,7 @@ export const ArchitectureHighlights: React.FC = () => {
 
             <div className="flex-1 p-6 rounded-xl bg-slate-950/70 border border-slate-800">
               <div className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-4">
-                Key Technical Implementations
+                Core Methodologies
               </div>
               <ul className="space-y-3.5">
                 {activeStudy.points.map((pt, i) => (
