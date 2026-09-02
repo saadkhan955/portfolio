@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, Download, FileText } from 'lucide-react';
 
 interface ResumeModalProps {
@@ -7,11 +8,10 @@ interface ResumeModalProps {
 }
 
 export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => {
-  // Lock body scroll and listen for Escape key
   useEffect(() => {
     if (isOpen) {
-      const originalOverflow = document.body.style.overflow;
-      document.body.style.overflow = 'hidden';
+      document.documentElement.classList.add('modal-open');
+      document.body.classList.add('modal-open');
 
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
@@ -20,8 +20,10 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
       };
 
       window.addEventListener('keydown', handleKeyDown);
+
       return () => {
-        document.body.style.overflow = originalOverflow || 'unset';
+        document.documentElement.classList.remove('modal-open');
+        document.body.classList.remove('modal-open');
         window.removeEventListener('keydown', handleKeyDown);
       };
     }
@@ -29,20 +31,22 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
 
   if (!isOpen) return null;
 
-  return (
+  return createPortal(
     <div 
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200"
+      className="fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-6 bg-slate-950/95 backdrop-blur-md overflow-y-auto"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
       role="dialog"
       aria-modal="true"
+      style={{ backgroundColor: 'rgba(2, 6, 23, 0.95)' }}
     >
       <div 
-        className="relative w-full max-w-4xl h-[85vh] bg-slate-900 border border-slate-700/80 rounded-2xl shadow-2xl shadow-black/80 flex flex-col text-slate-100 overflow-hidden my-auto"
+        className="relative w-full max-w-4xl h-[85vh] rounded-2xl shadow-2xl shadow-black flex flex-col text-slate-100 border border-slate-700/80 overflow-hidden my-auto"
+        style={{ backgroundColor: '#0f172a' }}
         onClick={(e) => e.stopPropagation()}
       >
-        <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-950/80">
+        <div className="flex items-center justify-between p-4 sm:p-5 border-b border-slate-800 bg-slate-950">
           <div className="flex items-center gap-2.5">
             <FileText className="w-5 h-5 text-cyan-400" />
             <div>
@@ -84,6 +88,7 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           <span>Mumbai, India</span>
         </div>
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };

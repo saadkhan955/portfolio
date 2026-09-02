@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import { createPortal } from 'react-dom';
 import { X, ExternalLink, CheckCircle2 } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { Project } from '../types';
@@ -12,8 +13,8 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
   // Lock background body scroll and listen for Escape key
   useEffect(() => {
     if (project) {
-      const originalOverflow = document.body.style.overflow;
-      document.body.style.overflow = 'hidden';
+      document.documentElement.classList.add('modal-open');
+      document.body.classList.add('modal-open');
 
       const handleKeyDown = (e: KeyboardEvent) => {
         if (e.key === 'Escape') {
@@ -22,8 +23,10 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
       };
 
       window.addEventListener('keydown', handleKeyDown);
+
       return () => {
-        document.body.style.overflow = originalOverflow || 'unset';
+        document.documentElement.classList.remove('modal-open');
+        document.body.classList.remove('modal-open');
         window.removeEventListener('keydown', handleKeyDown);
       };
     }
@@ -31,17 +34,19 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
 
   if (!project) return null;
 
-  return (
+  return createPortal(
     <div 
-      className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-950/90 backdrop-blur-md overflow-y-auto animate-in fade-in duration-200"
+      className="fixed inset-0 z-[99999] flex items-center justify-center p-4 sm:p-6 bg-slate-950/95 backdrop-blur-md overflow-y-auto"
       onClick={(e) => {
         if (e.target === e.currentTarget) onClose();
       }}
       role="dialog"
       aria-modal="true"
+      style={{ backgroundColor: 'rgba(2, 6, 23, 0.95)' }}
     >
       <div 
-        className="relative w-full max-w-2xl max-h-[88vh] overflow-y-auto bg-slate-900 border border-slate-700/80 rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black/80 text-slate-100 my-auto"
+        className="relative w-full max-w-2xl max-h-[85vh] overflow-y-auto rounded-2xl p-6 sm:p-8 shadow-2xl shadow-black text-slate-100 border border-slate-700/80 my-auto"
+        style={{ backgroundColor: '#0f172a' }}
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
@@ -88,7 +93,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
           {project.metrics && project.metrics.length > 0 && (
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5">
               {project.metrics.map((m, idx) => (
-                <div key={idx} className="p-2.5 bg-slate-950/80 border border-slate-800 rounded-xl">
+                <div key={idx} className="p-2.5 bg-slate-950 border border-slate-800 rounded-xl">
                   <div className="text-[11px] text-slate-400 font-medium">{m.label}</div>
                   <div className="text-xs sm:text-sm font-bold text-white mt-0.5">{m.value}</div>
                 </div>
@@ -163,6 +168,7 @@ export const ProjectModal: React.FC<ProjectModalProps> = ({ project, onClose }) 
         </div>
 
       </div>
-    </div>
+    </div>,
+    document.body
   );
 };
