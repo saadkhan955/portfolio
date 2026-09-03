@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Mail, Copy, Check, FileText, ArrowUpRight, Send, MessageSquare, User, Tag, CheckCircle2, AlertCircle } from 'lucide-react';
+import { Mail, Copy, Check, FileText, ArrowUpRight, Send, MessageSquare, User, Tag, CheckCircle2, AlertCircle, Loader2 } from 'lucide-react';
 import { GithubIcon } from './Icons';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
@@ -7,10 +7,17 @@ interface ContactSectionProps {
   onOpenResume: () => void;
 }
 
+interface ApiContactResponse {
+  success?: boolean;
+  error?: string;
+  message?: string;
+}
+
 export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) => {
   const [copied, setCopied] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
 
   const [formData, setFormData] = useState({
     name: '',
@@ -39,8 +46,10 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
     return errs;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setSubmitError(null);
+
     const validationErrors = validate();
     if (Object.keys(validationErrors).length > 0) {
       setErrors(validationErrors);
@@ -50,20 +59,43 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
     setErrors({});
     setIsSubmitting(true);
 
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      // SAFETY: Response JSON is parsed into our structured ApiContactResponse interface for status and error fields
+      const result = (await response.json().catch(() => ({}))) as Partial<ApiContactResponse>;
+
+      if (response.ok && Boolean(result.success)) {
+        setIsSubmitting(false);
+        setSubmitted(true);
+      } else {
+        const errorMsg = result.error ?? `Submission failed with status ${response.status}.`;
+        console.warn('API submission failed, falling back to direct email:', errorMsg);
+        setSubmitError(errorMsg);
+        setIsSubmitting(false);
+      }
+    } catch (err: unknown) {
+      console.warn('Network error during contact submission:', err);
+      setSubmitError('Unable to connect to contact server. You can still email directly below.');
+      setIsSubmitting(false);
+    }
+  };
+
+  const handleDirectMailFallback = () => {
     const subject = encodeURIComponent(`[Portfolio Inquiry] ${formData.projectType} - from ${formData.name}`);
     const body = encodeURIComponent(
       `Hi Saad,\n\nName: ${formData.name}\nEmail: ${formData.email}\nProject Type: ${formData.projectType}\n\nMessage:\n${formData.message}\n\n---\nSent from saadkhan.dev portfolio`
     );
-
-    setTimeout(() => {
-      setIsSubmitting(false);
-      setSubmitted(true);
-      window.location.href = `mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`;
-    }, 500);
+    window.location.href = `mailto:${PERSONAL_INFO.email}?subject=${subject}&body=${body}`;
   };
 
   const handleReset = () => {
     setSubmitted(false);
+    setSubmitError(null);
     setFormData({
       name: '',
       email: '',
@@ -95,7 +127,7 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
               </h2>
 
               <p className="text-sm sm:text-base text-slate-300 leading-relaxed max-w-xl mx-auto">
-                Have an upcoming Drupal project, React web application, or custom backend requirement? Leave a message below or connect directly.
+                Have an upcoming Drupal project, React web application, or custom backend requirement? Leave a message below to reach my inbox directly.
               </p>
             </div>
 
@@ -107,14 +139,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                 
                 {submitted ? (
                   <div className="py-12 text-center space-y-4 my-auto">
-                    <div className="w-14 h-14 rounded-2xl bg-cyan-950 border border-cyan-800/60 flex items-center justify-center text-cyan-400 mx-auto">
+                    <div className="w-14 h-14 rounded-2xl bg-emerald-950 border border-emerald-800/60 flex items-center justify-center text-emerald-400 mx-auto shadow-lg shadow-emerald-950/50">
                       <CheckCircle2 className="w-7 h-7" />
                     </div>
                     <h3 className="text-xl font-bold text-white">
-                      Inquiry Dispatched to {PERSONAL_INFO.email}!
+                      Message Sent Directly to Saad's Inbox!
                     </h3>
-                    <p className="text-xs sm:text-sm text-slate-300 max-w-sm mx-auto">
-                      Your default mail client has opened with your inquiry pre-filled to <strong>{PERSONAL_INFO.email}</strong>.
+                    <p className="text-xs sm:text-sm text-slate-300 max-w-sm mx-auto leading-relaxed">
+                      Thank you, <strong>{formData.name}</strong>. Your message has been received at <strong>{PERSONAL_INFO.email}</strong>. I will get back to you shortly.
                     </p>
                     <button
                       type="button"
@@ -231,6 +263,23 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                           </p>
                         )}
                       </div>
+
+                      {/* Server Error Notification with Fallback Link */}
+                      {submitError && (
+                        <div className="p-3 bg-amber-950/60 border border-amber-800/80 rounded-xl text-xs text-amber-200 flex flex-col gap-2">
+                          <div className="flex items-center gap-1.5 font-semibold">
+                            <AlertCircle className="w-4 h-4 text-amber-400 shrink-0" />
+                            <span>{submitError}</span>
+                          </div>
+                          <button
+                            type="button"
+                            onClick={handleDirectMailFallback}
+                            className="text-left text-cyan-300 hover:text-cyan-200 underline font-medium text-[11px] cursor-pointer"
+                          >
+                            Click here to open email directly with pre-filled inquiry ➔
+                          </button>
+                        </div>
+                      )}
                     </div>
 
                     {/* Submit Button */}
@@ -240,11 +289,14 @@ export const ContactSection: React.FC<ContactSectionProps> = ({ onOpenResume }) 
                       className="w-full py-3 px-6 text-xs font-bold text-slate-950 bg-gradient-to-r from-cyan-400 to-sky-400 hover:from-cyan-300 hover:to-sky-300 rounded-xl transition-all shadow-md shadow-cyan-500/20 hover:shadow-cyan-500/30 flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50 mt-4"
                     >
                       {isSubmitting ? (
-                        <span>Preparing email...</span>
+                        <>
+                          <Loader2 className="w-4 h-4 animate-spin text-slate-950" />
+                          <span>Sending message...</span>
+                        </>
                       ) : (
                         <>
                           <Send className="w-3.5 h-3.5" />
-                          <span>Submit Inquiry</span>
+                          <span>Send Message Directly</span>
                         </>
                       )}
                     </button>
