@@ -93,7 +93,7 @@ export default {
           },
           body: JSON.stringify({
             from: 'Saad Khan Portfolio <contact@khansaad.dev>',
-            to: ['saadkhan955@gmail.com'],
+            to: ['contact@khansaad.dev'],
             reply_to: email,
             subject: `[Portfolio Inquiry] ${projectType} - from ${name}`,
             html: htmlContent
@@ -122,7 +122,7 @@ export default {
         return new Response(
           JSON.stringify({
             success: true,
-            message: 'Inquiry sent successfully to Saad Khan!',
+            message: 'Inquiry sent successfully to contact@khansaad.dev!',
             emailId: successJson.id
           }),
           {
