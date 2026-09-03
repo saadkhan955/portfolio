@@ -178,7 +178,6 @@ export default {
                 <div class="summary-card">
                   <div class="summary-header">Inquiry Summary</div>
                   <div class="summary-row"><span class="summary-label">Area of Interest:</span> <span class="summary-value">${safeProjectType}</span></div>
-                  <div class="summary-row"><span class="summary-label">Sender Email:</span> <span class="summary-value">${safeEmail}</span></div>
                   <div class="summary-message">&ldquo;${safeMessage}&rdquo;</div>
                 </div>
 
