@@ -2,16 +2,19 @@ import { Project, Experience, SkillGroup } from '../types';
 
 export const PERSONAL_INFO = {
   name: 'Saad Khan',
-  role: 'Full-Stack Drupal Developer & Modern Web Engineer',
+  role: 'Drupal & Full-Stack Engineer',
+  headline: 'Drupal & Full-Stack Engineer building enterprise web platforms',
   status: 'Drupal Developer at ThisGainIndia (GAIN)',
   location: 'Mumbai, India',
   email: 'contact@khansaad.dev',
   github: 'https://github.com/saadkhan955',
-  bio: 'Full-Stack Drupal Developer with 5+ years of experience engineering scalable CMS architectures, custom PHP 8.3 modules, Search API pipelines, and high-performance React/TypeScript applications. Proven track record in Drupal 10/11 core migrations, custom backend services, payment engines, and Core Web Vitals optimization.',
+  linkedin: 'https://linkedin.com/in/saadkhan955',
+  resumePdfUrl: '/Saad-Khan-Drupal-Full-Stack-Engineer-Resume.pdf',
+  bio: 'I engineer scalable Drupal 10/11 platforms, custom PHP backend systems, and modern React applications with a focus on maintainability, performance, and production reliability.',
   experienceYears: '5+',
   enterpriseProjectsCount: '15+',
   productionCommits: '350+',
-  performanceFocus: 'Backend Architecture & High Performance',
+  performanceFocus: 'Enterprise Architecture & Core Web Vitals',
 };
 
 export const PROJECTS: Project[] = [

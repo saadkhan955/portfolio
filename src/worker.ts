@@ -287,7 +287,17 @@ export default {
       }
     }
 
-    // Default static assets handler
-    return env.ASSETS.fetch(request);
+    // Default static assets handler with Cloudflare Security Headers
+    const assetResponse = await env.ASSETS.fetch(request);
+    const newHeaders = new Headers(assetResponse.headers);
+    newHeaders.set('X-Content-Type-Options', 'nosniff');
+    newHeaders.set('X-Frame-Options', 'SAMEORIGIN');
+    newHeaders.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    newHeaders.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()');
+    return new Response(assetResponse.body, {
+      status: assetResponse.status,
+      statusText: assetResponse.statusText,
+      headers: newHeaders,
+    });
   }
 };

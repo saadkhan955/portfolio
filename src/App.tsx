@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React, { useState, Suspense, lazy } from 'react';
 import { Navbar } from './components/Navbar';
 import { Hero } from './components/Hero';
 import { StatsBar } from './components/StatsBar';
 import { ProjectSection } from './components/ProjectSection';
-import { ExtensionsShowcase } from './components/ExtensionsShowcase';
-import { ArchitectureHighlights } from './components/ArchitectureHighlights';
 import { ExperienceTimeline } from './components/ExperienceTimeline';
+import { ArchitectureHighlights } from './components/ArchitectureHighlights';
+import { ExtensionsShowcase } from './components/ExtensionsShowcase';
 import { SkillsSection } from './components/SkillsSection';
 import { ContactSection } from './components/ContactSection';
-import { ResumeModal } from './components/ResumeModal';
 import { Footer } from './components/Footer';
+
+// Lazy load non-critical modal component for optimal initial payload
+const ResumeModal = lazy(() => import('./components/ResumeModal').then((module) => ({ default: module.ResumeModal })));
 
 export const App: React.FC = () => {
   const [resumeOpen, setResumeOpen] = useState(false);
@@ -22,15 +24,18 @@ export const App: React.FC = () => {
         <Hero onOpenResume={() => setResumeOpen(true)} />
         <StatsBar />
         <ProjectSection />
-        <ExtensionsShowcase />
-        <ArchitectureHighlights />
         <ExperienceTimeline />
+        <ArchitectureHighlights />
+        <ExtensionsShowcase />
         <SkillsSection />
         <ContactSection onOpenResume={() => setResumeOpen(true)} />
       </main>
 
       <Footer />
-      <ResumeModal isOpen={resumeOpen} onClose={() => setResumeOpen(false)} />
+      
+      <Suspense fallback={null}>
+        {resumeOpen && <ResumeModal isOpen={resumeOpen} onClose={() => setResumeOpen(false)} />}
+      </Suspense>
     </div>
   );
 };

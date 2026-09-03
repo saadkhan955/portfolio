@@ -50,16 +50,16 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
           <div className="flex items-center gap-2.5">
             <FileText className="w-5 h-5 text-cyan-400" />
             <div>
-              <h3 className="text-base font-bold text-white">Saad Khan - Resume</h3>
-              <p className="text-xs text-slate-400">Frontend Developer & Drupal Specialist (PDF Document)</p>
+              <h3 className="text-base font-bold text-white">Saad Khan — Verified Resume</h3>
+              <p className="text-xs text-slate-400">Drupal &amp; Full-Stack Engineer (PDF Document)</p>
             </div>
           </div>
 
           <div className="flex items-center gap-2">
             <a
-              href="./Saad_Khan_Resume_202608.pdf"
-              download="Saad_Khan_Resume_202608.pdf"
-              className="flex items-center gap-1.5 px-3.5 py-1.5 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors"
+              href="/Saad-Khan-Drupal-Full-Stack-Engineer-Resume.pdf"
+              download="Saad-Khan-Drupal-Full-Stack-Engineer-Resume.pdf"
+              className="flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-lg transition-colors cursor-pointer shadow-sm shadow-cyan-500/20"
             >
               <Download className="w-3.5 h-3.5" />
               <span>Download PDF</span>
@@ -77,14 +77,14 @@ export const ResumeModal: React.FC<ResumeModalProps> = ({ isOpen, onClose }) => 
 
         <div className="flex-1 bg-slate-950 relative">
           <iframe
-            src="./Saad_Khan_Resume_202608.pdf"
+            src="/Saad-Khan-Drupal-Full-Stack-Engineer-Resume.pdf"
             className="w-full h-full border-0"
             title="Saad Khan Resume"
           />
         </div>
 
         <div className="p-3 bg-slate-950 border-t border-slate-800 flex items-center justify-between text-xs text-slate-400 px-5">
-          <span>Contact: contact@khansaad.dev</span>
+          <span>Direct Contact: contact@khansaad.dev</span>
           <span>Mumbai, India</span>
         </div>
       </div>

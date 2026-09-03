@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Menu, X, FileText, ArrowUpRight } from 'lucide-react';
-import { GithubIcon, SaadKhanLogoEmblem } from './Icons';
+import { GithubIcon, LinkedinIcon, SaadKhanLogoEmblem } from './Icons';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface NavbarProps {
@@ -20,10 +20,10 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
   }, []);
 
   const navLinks = [
-    { name: 'Featured Work', href: '#projects' },
-    { name: 'Extensions', href: '#extensions' },
-    { name: 'Architecture', href: '#architecture' },
+    { name: 'Selected Work', href: '#projects' },
     { name: 'Experience', href: '#experience' },
+    { name: 'Architecture', href: '#architecture' },
+    { name: 'Open Source', href: '#extensions' },
     { name: 'Skills', href: '#skills' },
     { name: 'Contact', href: '#contact' },
   ];
@@ -39,7 +39,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo / Option 4: Connected Dual-Tone Brand */}
+          {/* Logo / Personal Brand */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="shrink-0 group-hover:scale-105 transition-transform">
               <SaadKhanLogoEmblem className="w-9 h-9 shadow-md shadow-cyan-500/15" />
@@ -50,8 +50,8 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
                 <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse shadow-sm shadow-cyan-400/50" />
                 <span className="bg-gradient-to-r from-cyan-400 to-sky-300 bg-clip-text text-transparent font-black">KHAN</span>
               </div>
-              <span className="text-[10px] tracking-wider text-slate-400 font-semibold uppercase mt-1">
-                Drupal &bull; Full-Stack Architect
+              <span className="text-[10px] tracking-wider text-slate-400 font-semibold uppercase mt-1 font-mono">
+                Drupal &bull; Full-Stack Engineer
               </span>
             </div>
           </a>
@@ -70,20 +70,33 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           </nav>
 
           {/* Desktop Right Actions */}
-          <div className="hidden md:flex items-center gap-3">
+          <div className="hidden md:flex items-center gap-2.5">
             <a
               href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
+              title="GitHub Profile (saadkhan955)"
               className="p-2 text-slate-400 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-800 rounded-xl transition-colors"
             >
               <GithubIcon className="w-4 h-4" />
             </a>
 
+            <a
+              href={PERSONAL_INFO.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn Profile"
+              title="LinkedIn Profile"
+              className="p-2 text-slate-400 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-slate-800 rounded-xl transition-colors"
+            >
+              <LinkedinIcon className="w-4 h-4" />
+            </a>
+
             <button
               onClick={onOpenResume}
               className="flex items-center gap-1.5 px-3.5 py-2 text-xs font-semibold text-slate-200 bg-slate-900/80 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-xl transition-colors cursor-pointer"
+              title="Preview Resume"
             >
               <FileText className="w-3.5 h-3.5 text-cyan-400" />
               <span>Resume</span>
@@ -93,7 +106,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
               href="#contact"
               className="flex items-center gap-1.5 px-4 py-2 text-xs font-bold text-slate-950 bg-cyan-400 hover:bg-cyan-300 rounded-xl transition-colors shadow-sm shadow-cyan-500/20"
             >
-              <span>Get in Touch</span>
+              <span>Contact</span>
               <ArrowUpRight className="w-3.5 h-3.5" />
             </a>
           </div>
@@ -137,15 +150,26 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           </nav>
 
           <div className="pt-4 border-t border-slate-800 flex items-center justify-between gap-3">
-            <a
-              href={PERSONAL_INFO.github}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 text-xs font-semibold text-slate-300 p-2 bg-slate-900 border border-slate-800 rounded-lg"
-            >
-              <GithubIcon className="w-4 h-4" />
-              <span>GitHub</span>
-            </a>
+            <div className="flex items-center gap-2">
+              <a
+                href={PERSONAL_INFO.github}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 bg-slate-900 border border-slate-800 rounded-lg text-slate-300 hover:text-white"
+                aria-label="GitHub Profile"
+              >
+                <GithubIcon className="w-4 h-4" />
+              </a>
+              <a
+                href={PERSONAL_INFO.linkedin}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="p-2.5 bg-slate-900 border border-slate-800 rounded-lg text-slate-300 hover:text-white"
+                aria-label="LinkedIn Profile"
+              >
+                <LinkedinIcon className="w-4 h-4" />
+              </a>
+            </div>
 
             <a
               href="#contact"
