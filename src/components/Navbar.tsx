@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, FileText, ArrowUpRight, Terminal } from 'lucide-react';
-import { GithubIcon } from './Icons';
+import { Menu, X, FileText, ArrowUpRight } from 'lucide-react';
+import { GithubIcon, SaadKhanLogoEmblem } from './Icons';
 import { PERSONAL_INFO } from '../data/portfolioData';
 
 interface NavbarProps {
@@ -39,17 +39,19 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           
-          {/* Logo / Personal Brand */}
+          {/* Logo / Option 4: Connected Dual-Tone Brand */}
           <a href="#" className="flex items-center gap-3 group">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-cyan-400 to-sky-500 flex items-center justify-center text-slate-950 shadow-md shadow-cyan-500/20 group-hover:scale-105 transition-transform">
-              <Terminal className="w-5 h-5 font-bold" />
+            <div className="shrink-0 group-hover:scale-105 transition-transform">
+              <SaadKhanLogoEmblem className="w-9 h-9 shadow-md shadow-cyan-500/15" />
             </div>
-            <div>
-              <span className="text-sm font-bold text-white tracking-tight group-hover:text-cyan-400 transition-colors block">
-                {PERSONAL_INFO.name}
-              </span>
-              <span className="text-[11px] text-slate-400 font-medium block">
-                DRUPAL & FULL-STACK ENGINEER
+            <div className="flex flex-col">
+              <div className="flex items-center gap-1.5 font-extrabold tracking-tight text-sm leading-none">
+                <span className="text-white group-hover:text-slate-200 transition-colors">SAAD</span>
+                <span className="w-1.5 h-1.5 rounded-full bg-cyan-400 animate-pulse shadow-sm shadow-cyan-400/50" />
+                <span className="bg-gradient-to-r from-cyan-400 to-sky-300 bg-clip-text text-transparent font-black">KHAN</span>
+              </div>
+              <span className="text-[10px] tracking-wider text-slate-400 font-semibold uppercase mt-1">
+                Drupal &bull; Full-Stack Architect
               </span>
             </div>
           </a>

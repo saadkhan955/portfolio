@@ -1,5 +1,6 @@
 import React from 'react';
-import { Code2, ArrowUp } from 'lucide-react';
+import { ArrowUp } from 'lucide-react';
+import { SaadKhanLogoEmblem } from './Icons';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -11,11 +12,12 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
         
         <div className="flex items-center gap-3">
-          <div className="w-7 h-7 rounded-lg bg-gradient-to-tr from-cyan-600 to-sky-400 flex items-center justify-center text-white font-bold">
-            <Code2 className="w-4 h-4" />
-          </div>
-          <div>
-            <span className="font-bold text-white">Saad Khan</span> &copy; {new Date().getFullYear()}. All rights reserved.
+          <SaadKhanLogoEmblem className="w-8 h-8 shadow-sm shadow-cyan-500/10" />
+          <div className="flex items-center gap-1.5 font-bold">
+            <span className="text-white">SAAD</span>
+            <span className="w-1 h-1 rounded-full bg-cyan-400" />
+            <span className="text-cyan-400">KHAN</span>
+            <span className="text-slate-500 font-normal ml-1">&copy; {new Date().getFullYear()}. All rights reserved.</span>
           </div>
         </div>
 

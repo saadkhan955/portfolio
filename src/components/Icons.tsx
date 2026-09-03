@@ -27,3 +27,52 @@ export const ChromeIcon: React.FC<{ className?: string }> = ({ className = 'w-4 
     <path d="M10.88 21.94L15.38 14.14" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
   </svg>
 );
+
+export const SaadKhanLogoEmblem: React.FC<{ className?: string }> = ({ className = 'w-9 h-9' }) => (
+  <svg 
+    className={className} 
+    viewBox="0 0 40 40" 
+    fill="none" 
+    xmlns="http://www.w3.org/2000/svg"
+    aria-hidden="true"
+  >
+    <defs>
+      <linearGradient id="sk-bg-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#0f172a" />
+        <stop offset="1" stopColor="#020617" />
+      </linearGradient>
+      <linearGradient id="sk-cyan-grad" x1="8" y1="8" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#38bdf8" />
+        <stop offset="1" stopColor="#0284c7" />
+      </linearGradient>
+      <linearGradient id="sk-border-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
+        <stop stopColor="#38bdf8" stopOpacity="0.7" />
+        <stop offset="1" stopColor="#1e293b" />
+      </linearGradient>
+    </defs>
+    
+    {/* Outer Rounded Squircle with Subtle Neon Border */}
+    <rect width="40" height="40" rx="11" fill="url(#sk-bg-grad)" stroke="url(#sk-border-grad)" strokeWidth="1.5" />
+    
+    {/* Stylized 'S' Ribbon */}
+    <path 
+      d="M19 12H13.5C11.567 12 10 13.567 10 15.5C10 17.433 11.567 19 13.5 19H16.5C18.433 19 20 20.567 20 22.5C20 24.433 18.433 26 16.5 26H10" 
+      stroke="url(#sk-cyan-grad)" 
+      strokeWidth="2.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+    />
+    
+    {/* Stylized 'K' Stem & Chevron */}
+    <path 
+      d="M24 12V28M30.5 13L24.5 20L31 27" 
+      stroke="#38bdf8" 
+      strokeWidth="2.5" 
+      strokeLinecap="round" 
+      strokeLinejoin="round" 
+    />
+    
+    {/* Precision Accent Node */}
+    <circle cx="24.5" cy="20" r="1.5" fill="#f8fafc" />
+  </svg>
+);
