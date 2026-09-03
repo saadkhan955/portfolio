@@ -373,7 +373,7 @@ export const PROJECTS: Project[] = [
   // --- CHROME EXTENSIONS & TOOLS ---
   {
     id: 'youtube-tabs-to-playlist',
-    title: 'TabFlow for YouTube',
+    title: 'TabFlow',
     subtitle: 'Chrome Extension & Playlist Organizer',
     category: 'chrome-extensions',
     clientOrOrg: 'Open Source / Web Store',

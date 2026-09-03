@@ -37,7 +37,7 @@ export const ExtensionsShowcase: React.FC = () => {
         {/* Prominent Extension Showcase Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-10">
           
-          {/* Extension 1: TabFlow for YouTube */}
+          {/* Extension 1: TabFlow */}
           <div className="glass-panel rounded-3xl p-6 sm:p-8 border border-slate-800/90 bg-gradient-to-b from-slate-900/90 to-slate-950/90 shadow-2xl relative overflow-hidden flex flex-col justify-between group">
             <div className="absolute top-0 right-0 w-64 h-64 bg-red-500/10 blur-[90px] rounded-full pointer-events-none" />
 
@@ -53,7 +53,7 @@ export const ExtensionsShowcase: React.FC = () => {
                       Chrome Extension (MV3)
                     </span>
                     <h3 className="text-2xl font-extrabold text-white tracking-tight group-hover:text-cyan-300 transition-colors">
-                      TabFlow for YouTube
+                      TabFlow
                     </h3>
                   </div>
                 </div>
