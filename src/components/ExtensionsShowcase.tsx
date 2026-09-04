@@ -129,7 +129,7 @@ export const ExtensionsShowcase: React.FC = () => {
               </div>
 
               <a
-                href="https://github.com/saadkhan955/youtube-tabs-to-playlist"
+                href="https://github.com/saadkhan955/tabflow"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-1.5 px-3 py-2 text-xs font-semibold text-slate-300 bg-slate-900 hover:bg-slate-800 border border-slate-800 hover:border-slate-700 rounded-xl transition-colors"

@@ -372,7 +372,7 @@ export const PROJECTS: Project[] = [
 
   // --- CHROME EXTENSIONS & TOOLS ---
   {
-    id: 'youtube-tabs-to-playlist',
+    id: 'tabflow',
     title: 'TabFlow',
     subtitle: 'Chrome Extension & Playlist Organizer',
     category: 'chrome-extensions',
@@ -381,7 +381,7 @@ export const PROJECTS: Project[] = [
     description: 'Manifest V3 browser extension and modern landing page that converts open YouTube tabs into organized, trackable YouTube playlists with instant theme switching.',
     longDescription: 'Created a tab-organizing browser extension built under Chrome Extension Manifest V3 security standards. Features automatic light/dark theme switching, live playlist synchronization, and a dedicated landing page.',
     liveUrl: 'https://tfy.khansaad.dev/',
-    githubUrl: 'https://github.com/saadkhan955/youtube-tabs-to-playlist',
+    githubUrl: 'https://github.com/saadkhan955/tabflow',
     techStack: ['JavaScript (ES6+)', 'Chrome Extension API', 'Tailwind CSS', 'HTML5', 'Cloudflare Pages'],
     metrics: [
       { label: 'Extension Spec', value: 'Chrome MV3' },
