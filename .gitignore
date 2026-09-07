@@ -26,3 +26,8 @@ lerna-debug.log*
 *.sln
 *.sw?
 .agents
+.loadout/generated/
+.loadout/cache/
+.loadout/logs/
+.loadout/local.toml
+CLAUDE.local.md
