@@ -12,7 +12,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-6">
         
         <div className="flex items-center gap-3">
-          <SaadKhanLogoEmblem className="w-8 h-8 shadow-sm shadow-cyan-500/10" />
+          <SaadKhanLogoEmblem className="w-8 h-8" />
           <div className="flex items-center gap-1.5 font-bold">
             <span className="text-white">SAAD</span>
             <span className="w-1 h-1 rounded-full bg-cyan-400" />

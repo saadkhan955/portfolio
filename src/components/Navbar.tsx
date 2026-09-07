@@ -42,7 +42,7 @@ export const Navbar: React.FC<NavbarProps> = ({ onOpenResume }) => {
           {/* Logo / Personal Brand */}
           <a href="#" className="flex items-center gap-3 group">
             <div className="shrink-0 group-hover:scale-105 transition-transform">
-              <SaadKhanLogoEmblem className="w-9 h-9 shadow-md shadow-cyan-500/15" />
+              <SaadKhanLogoEmblem className="w-9 h-9" />
             </div>
             <div className="flex flex-col">
               <div className="flex items-center gap-1.5 font-extrabold tracking-tight text-sm leading-none">

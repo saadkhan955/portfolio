@@ -57,14 +57,10 @@ export const SaadKhanLogoEmblem: React.FC<{ className?: string }> = ({ className
         <stop stopColor="#38bdf8" />
         <stop offset="1" stopColor="#0284c7" />
       </linearGradient>
-      <linearGradient id="sk-border-grad" x1="0" y1="0" x2="40" y2="40" gradientUnits="userSpaceOnUse">
-        <stop stopColor="#38bdf8" stopOpacity="0.7" />
-        <stop offset="1" stopColor="#1e293b" />
-      </linearGradient>
     </defs>
     
-    {/* Outer Rounded Squircle with Subtle Neon Border */}
-    <rect width="40" height="40" rx="11" fill="url(#sk-bg-grad)" stroke="url(#sk-border-grad)" strokeWidth="1.5" />
+    {/* Outer Rounded Squircle - Border completely removed */}
+    <rect width="40" height="40" rx="11" fill="url(#sk-bg-grad)" />
     
     {/* Stylized 'S' Ribbon */}
     <path 
